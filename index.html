@@ -44,10 +44,9 @@
   #leagueRecap { border: 2px solid #444; background: #F5F5F0; padding: 14px 18px; margin-top: 30px; border-radius: 4px; }
   #leagueRecap h2 { margin: -14px -18px 12px -18px; background: #444; border-radius: 4px 4px 0 0; }
   #leagueRecap h3 { margin-top: 16px; margin-bottom: 6px; }
-  .priority-list { list-style: none; padding: 0; margin: 8px 0 4px 0; max-width: 320px; }
-  .priority-list li { background: #fff; border: 1px solid #999; padding: 8px 10px; margin-bottom: 4px; cursor: grab; border-radius: 3px; font-size: 13px; user-select: none; }
-  .priority-list li:active { cursor: grabbing; }
-  .priority-list li.dragging { opacity: 0.4; }
+  .priority-list { list-style: none; padding: 0; margin: 8px 0 4px 0; max-width: 380px; }
+  .priority-list li { background: #fff; border: 1px solid #999; padding: 8px 10px; margin-bottom: 4px; border-radius: 3px; font-size: 13px; display: flex; align-items: center; gap: 10px; }
+  .priority-rank { font-weight: bold; padding: 3px 4px; min-width: 46px; }
   .priority-tip { font-size: 11px; color: #666; font-style: italic; margin: 2px 0 14px 0; }
   #validationToast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(150px); background: #c62828; color: white; padding: 12px 20px; border-radius: 4px; font-size: 14px; max-width: 520px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); transition: transform 0.3s ease; z-index: 1000; }
   #validationToast.visible { transform: translateX(-50%) translateY(0); }
@@ -123,36 +122,24 @@
     <div>
       <label style="display:block; margin-top:10px;">Promotion Priority (Championship → Premier):</label>
       <ul id="champPriorityList" class="priority-list">
-        <li draggable="true" data-rule="playoff_champion">
-          <span class="priority-label">☰ Playoff Champion</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="playoff_champion">
+          <select class="priority-rank" aria-label="Priority rank for Playoff Champion"></select>
+          <span class="priority-label">Playoff Champion</span>
         </li>
-        <li draggable="true" data-rule="shield_winner">
-          <span class="priority-label">☰ Shield Winner</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="shield_winner">
+          <select class="priority-rank" aria-label="Priority rank for Shield Winner"></select>
+          <span class="priority-label">Shield Winner</span>
         </li>
-        <li draggable="true" data-rule="playoff_runner_up">
-          <span class="priority-label">☰ Playoff Runner-up</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="playoff_runner_up">
+          <select class="priority-rank" aria-label="Priority rank for Playoff Runner-up"></select>
+          <span class="priority-label">Playoff Runner-up</span>
         </li>
-        <li draggable="true" data-rule="regular_season_position">
-          <span class="priority-label">☰ Regular Season Position</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="regular_season_position">
+          <select class="priority-rank" aria-label="Priority rank for Regular Season Position"></select>
+          <span class="priority-label">Regular Season Position</span>
         </li>
       </ul>
-      <p class="priority-tip">Drag to reorder, or use the arrow buttons. Tip: drag/move "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
+      <p class="priority-tip">Set each rule's rank (1 = highest priority, applied first). Tip: set "Regular Season Position" to rank 1 to ignore playoff results entirely for promotion decisions.</p>
     </div>
   </fieldset>
 <br>
@@ -168,43 +155,28 @@
     <div>
       <label style="display:block; margin-top:10px;">Promotion Priority (League One → Championship):</label>
       <ul id="l1PriorityList" class="priority-list">
-        <li draggable="true" data-rule="playoff_champion">
-          <span class="priority-label">☰ Playoff Champion</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="playoff_champion">
+          <select class="priority-rank" aria-label="Priority rank for Playoff Champion"></select>
+          <span class="priority-label">Playoff Champion</span>
         </li>
-        <li draggable="true" data-rule="shield_winner">
-          <span class="priority-label">☰ Shield Winner</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="shield_winner">
+          <select class="priority-rank" aria-label="Priority rank for Shield Winner"></select>
+          <span class="priority-label">Shield Winner</span>
         </li>
-        <li draggable="true" data-rule="other_conference_winner">
-          <span class="priority-label">☰ Other Conference Winner</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="other_conference_winner">
+          <select class="priority-rank" aria-label="Priority rank for Other Conference Winner"></select>
+          <span class="priority-label">Other Conference Winner</span>
         </li>
-        <li draggable="true" data-rule="playoff_runner_up">
-          <span class="priority-label">☰ Playoff Runner-up</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="playoff_runner_up">
+          <select class="priority-rank" aria-label="Priority rank for Playoff Runner-up"></select>
+          <span class="priority-label">Playoff Runner-up</span>
         </li>
-        <li draggable="true" data-rule="regular_season_position">
-          <span class="priority-label">☰ Regular Season Position</span>
-          <span class="priority-arrows">
-            <button type="button" class="priority-up" aria-label="Move up">▲</button>
-            <button type="button" class="priority-down" aria-label="Move down">▼</button>
-          </span>
+        <li data-rule="regular_season_position">
+          <select class="priority-rank" aria-label="Priority rank for Regular Season Position"></select>
+          <span class="priority-label">Regular Season Position</span>
         </li>
       </ul>
-      <p class="priority-tip">Drag to reorder, or use the arrow buttons. "Other Conference Winner" is the top club of whichever conference did NOT produce the Shield Winner. Tip: drag/move "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
+      <p class="priority-tip">Set each rule's rank (1 = highest priority, applied first). "Other Conference Winner" is the top club of whichever conference did NOT produce the Shield Winner. Tip: set "Regular Season Position" to rank 1 to ignore playoff results entirely for promotion decisions.</p>
     </div>
   </fieldset>
 <br>
@@ -287,54 +259,48 @@ function rebuildListOrder(listEl, ruleIdOrder) {
   }
 }
 
-function getDragAfterElement(listEl, y) {
-  const draggableElements = [...listEl.querySelectorAll("li:not(.dragging)")];
-  return draggableElements.reduce((closest, child) => {
-    const box = child.getBoundingClientRect();
-    const offset = y - box.top - box.height / 2;
-    if (offset < 0 && offset > closest.offset) {
-      return { offset, element: child };
-    } else {
-      return closest;
-    }
-  }, { offset: Number.NEGATIVE_INFINITY }).element;
+function buildRankOptions(selectEl, count) {
+  selectEl.innerHTML = "";
+  for (let i = 1; i <= count; i++) {
+    const opt = document.createElement("option");
+    opt.value = String(i);
+    opt.textContent = String(i);
+    selectEl.appendChild(opt);
+  }
+}
+
+function refreshRankSelects(listEl) {
+  Array.from(listEl.children).forEach((li, idx) => {
+    li.querySelector(".priority-rank").value = String(idx + 1);
+  });
 }
 
 function setupPriorityList(listEl) {
-  let draggedItem = null;
-  let previousOrder = getListOrder(listEl);
+  const items = Array.from(listEl.children);
+  items.forEach((li) => buildRankOptions(li.querySelector(".priority-rank"), items.length));
+  refreshRankSelects(listEl);
 
-  listEl.querySelectorAll("li").forEach((li) => {
-    li.addEventListener("dragstart", () => {
-      draggedItem = li;
-      previousOrder = getListOrder(listEl);
-      li.classList.add("dragging");
-    });
-    li.addEventListener("dragend", () => {
-      li.classList.remove("dragging");
-    });
-  });
+  listEl.addEventListener("change", (e) => {
+    if (!e.target.classList.contains("priority-rank")) return;
+    const select = e.target;
+    const li = select.closest("li");
+    const previousOrder = getListOrder(listEl);
+    const oldIndex = previousOrder.indexOf(li.dataset.rule);
+    const newIndex = parseInt(select.value, 10) - 1;
+    if (newIndex === oldIndex) return;
 
-  listEl.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    if (draggedItem == null) return;
-    const afterElement = getDragAfterElement(listEl, e.clientY);
-    if (afterElement == null) {
-      listEl.appendChild(draggedItem);
-    } else {
-      listEl.insertBefore(draggedItem, afterElement);
-    }
-  });
+    const newOrder = previousOrder.slice();
+    newOrder.splice(oldIndex, 1);
+    newOrder.splice(newIndex, 0, li.dataset.rule);
 
-  listEl.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const newOrder = getListOrder(listEl);
     const validation = validatePriorityOrder(newOrder);
     if (!validation.valid) {
-      rebuildListOrder(listEl, previousOrder);
+      select.value = String(oldIndex + 1);
       showValidationError(validation.message);
+      return;
     }
-    draggedItem = null;
+    rebuildListOrder(listEl, newOrder);
+    refreshRankSelects(listEl);
   });
 }
 
