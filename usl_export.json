@@ -1,0 +1,5675 @@
+{
+  "schema_version": "1.0.0",
+  "exported_at": "2026-09-23T16:05:01+00:00",
+  "clubs": [
+    {
+      "club_id": "USL-001",
+      "display_name": "Louisville City",
+      "short_name": "LOU",
+      "market": "Louisville, KY",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "Lynn Family Stadium",
+        "capacity": 15304,
+        "utilization_pct": 63.6,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2014,
+        "first_pro_season": 2015,
+        "current_head_coach": "Simon Bird (interim)",
+        "coach_appointed_year": 2026,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 9658.5
+      }
+    },
+    {
+      "club_id": "USL-002",
+      "display_name": "Detroit City",
+      "short_name": "DET",
+      "market": "Detroit, MI",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Keyworth Stadium",
+        "capacity": 7933,
+        "utilization_pct": 78.6,
+        "planned_capacity": 15000,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": 2012,
+        "first_pro_season": 2012,
+        "current_head_coach": "Danny Dichio",
+        "coach_appointed_year": 2023,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 6208.5
+      }
+    },
+    {
+      "club_id": "USL-003",
+      "display_name": "Sacramento Republic",
+      "short_name": "SAC",
+      "market": "Sacramento, CA",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Current venue",
+        "capacity": 11569,
+        "utilization_pct": 84.7,
+        "planned_capacity": 20000,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": 2012,
+        "first_pro_season": 2014,
+        "current_head_coach": "Neill Collins",
+        "coach_appointed_year": 2025,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 9844
+      }
+    },
+    {
+      "club_id": "USL-004",
+      "display_name": "Colorado Springs Switchbacks",
+      "short_name": "COS",
+      "market": "Colorado Springs, CO",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "Weidner Field",
+        "capacity": 8000,
+        "utilization_pct": 92.1,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2013,
+        "first_pro_season": 2015,
+        "current_head_coach": "Alan McCann",
+        "coach_appointed_year": 2025,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 6692
+      }
+    },
+    {
+      "club_id": "USL-005",
+      "display_name": "Pittsburgh Riverhounds",
+      "short_name": "PIT",
+      "market": "Pittsburgh, PA",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "F.N.B. Stadium",
+        "capacity": 5000,
+        "utilization_pct": 98,
+        "planned_capacity": 15000,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 1998,
+        "first_pro_season": 1999,
+        "current_head_coach": "Rob Vincent",
+        "coach_appointed_year": 2025,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 5078.5
+      }
+    },
+    {
+      "club_id": "USL-006",
+      "display_name": "Rhode Island FC",
+      "short_name": "RIS",
+      "market": "Pawtucket, RI",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "Centreville Bank Stadium",
+        "capacity": 10500,
+        "utilization_pct": 82.9,
+        "planned_capacity": 15000,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2019,
+        "first_pro_season": 2024,
+        "current_head_coach": "Khano Smith",
+        "coach_appointed_year": 2023,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 8424
+      }
+    },
+    {
+      "club_id": "USL-007",
+      "display_name": "Indy Eleven",
+      "short_name": "IND",
+      "market": "Indianapolis, IN",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Michael A. Carroll Stadium",
+        "capacity": 12111,
+        "utilization_pct": 76.4,
+        "planned_capacity": 20000,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2013,
+        "first_pro_season": 2014,
+        "current_head_coach": "Sean McAuley",
+        "coach_appointed_year": 2024,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 9069.5
+      }
+    },
+    {
+      "club_id": "USL-008",
+      "display_name": "New Mexico United",
+      "short_name": "NMU",
+      "market": "Albuquerque, NM",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Isotopes Park (through 2029)",
+        "capacity": 13500,
+        "utilization_pct": 71.8,
+        "planned_capacity": 9000,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2019,
+        "current_head_coach": "Dennis Sanchez",
+        "coach_appointed_year": 2024,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 8827.5
+      }
+    },
+    {
+      "club_id": "USL-009",
+      "display_name": "Tampa Bay Rowdies",
+      "short_name": "TBR",
+      "market": "St. Petersburg, FL",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Al Lang Stadium",
+        "capacity": 7227,
+        "utilization_pct": 64,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2008,
+        "first_pro_season": 2010,
+        "current_head_coach": "Dominic Casciato",
+        "coach_appointed_year": 2026,
+        "tier": "low"
+      },
+      "market_attendance": {
+        "avg_2yr": 4895
+      }
+    },
+    {
+      "club_id": "USL-010",
+      "display_name": "Oakland Roots",
+      "short_name": "OAK",
+      "market": "Oakland, CA",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Oakland Coliseum (final season 2026)",
+        "capacity": 15000,
+        "utilization_pct": 55.3,
+        "planned_capacity": null,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2021,
+        "current_head_coach": "Ryan Martin",
+        "coach_appointed_year": 2025,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 7008
+      }
+    },
+    {
+      "club_id": "USL-011",
+      "display_name": "Phoenix Rising",
+      "short_name": "PHX",
+      "market": "Phoenix, AZ",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "Phoenix Rising Soccer Stadium",
+        "capacity": 10000,
+        "utilization_pct": 43.1,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2014,
+        "first_pro_season": 2014,
+        "current_head_coach": "Pa-Modou Kah",
+        "coach_appointed_year": 2024,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 4712
+      }
+    },
+    {
+      "club_id": "USL-012",
+      "display_name": "Lexington SC",
+      "short_name": "LEX",
+      "market": "Lexington, KY",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "Lexington SC Stadium",
+        "capacity": 7500,
+        "utilization_pct": 55.2,
+        "planned_capacity": 11000,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2021,
+        "first_pro_season": 2023,
+        "current_head_coach": "Vacant",
+        "coach_appointed_year": 2025,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 4526
+      }
+    },
+    {
+      "club_id": "USL-013",
+      "display_name": "Orange County SC",
+      "short_name": "OCSC",
+      "market": "Orange County, CA",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Championship Soccer Stadium",
+        "capacity": 5000,
+        "utilization_pct": 85,
+        "planned_capacity": 5000,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": 1998,
+        "first_pro_season": 2011,
+        "current_head_coach": "Danny Stone",
+        "coach_appointed_year": 2024,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 4356.5
+      }
+    },
+    {
+      "club_id": "USL-014",
+      "display_name": "El Paso Locomotive",
+      "short_name": "ELP",
+      "market": "El Paso, TX",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Southwest University Park",
+        "capacity": 9500,
+        "utilization_pct": 57.7,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2019,
+        "current_head_coach": "Junior Gonzalez",
+        "coach_appointed_year": 2025,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 5166
+      }
+    },
+    {
+      "club_id": "USL-015",
+      "display_name": "Birmingham Legion",
+      "short_name": "BHM",
+      "market": "Birmingham, AL",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Legion Field",
+        "capacity": 47100,
+        "utilization_pct": 9.4,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2017,
+        "first_pro_season": 2019,
+        "current_head_coach": "Jay Heaps",
+        "coach_appointed_year": 2026,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 4027
+      }
+    },
+    {
+      "club_id": "USL-016",
+      "display_name": "Charleston Battery",
+      "short_name": "CHS",
+      "market": "Charleston, SC",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Patriots Point Soccer Complex",
+        "capacity": 5000,
+        "utilization_pct": 79.3,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 1993,
+        "first_pro_season": 1993,
+        "current_head_coach": "Ben Pirmann",
+        "coach_appointed_year": 2022,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 3981.5
+      }
+    },
+    {
+      "club_id": "USL-017",
+      "display_name": "Hartford Athletic",
+      "short_name": "HFD",
+      "market": "Hartford, CT",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Trinity Health Stadium",
+        "capacity": 5500,
+        "utilization_pct": 84.3,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2019,
+        "current_head_coach": "Brendan Burke",
+        "coach_appointed_year": 2023,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 3797
+      }
+    },
+    {
+      "club_id": "USL-018",
+      "display_name": "FC Tulsa",
+      "short_name": "TUL",
+      "market": "Tulsa, OK",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "ONEOK Field",
+        "capacity": 7833,
+        "utilization_pct": 41.7,
+        "planned_capacity": null,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2013,
+        "first_pro_season": 2015,
+        "current_head_coach": "Luke Spencer",
+        "coach_appointed_year": 2025,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 3693.5
+      }
+    },
+    {
+      "club_id": "USL-019",
+      "display_name": "San Antonio FC",
+      "short_name": "SA",
+      "market": "San Antonio, TX",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Toyota Field",
+        "capacity": 8296,
+        "utilization_pct": 74.5,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2016,
+        "first_pro_season": 2016,
+        "current_head_coach": "Carlos Llamosa",
+        "coach_appointed_year": 2024,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 6286
+      }
+    },
+    {
+      "club_id": "USL-020",
+      "display_name": "Monterey Bay FC",
+      "short_name": "MB",
+      "market": "Seaside, CA",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "Cardinale Stadium",
+        "capacity": 6000,
+        "utilization_pct": 57.2,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2021,
+        "first_pro_season": 2022,
+        "current_head_coach": "Alex Covelo",
+        "coach_appointed_year": 2026,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 3398
+      }
+    },
+    {
+      "club_id": "USL-021",
+      "display_name": "Brooklyn FC",
+      "short_name": "BKN",
+      "market": "Brooklyn, NY",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Maimonides Park",
+        "capacity": 7000,
+        "utilization_pct": 32,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2023,
+        "first_pro_season": 2026,
+        "current_head_coach": "Marlon LeBlanc",
+        "coach_appointed_year": 2025,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 2038
+      }
+    },
+    {
+      "club_id": "USL-022",
+      "display_name": "Las Vegas Lights",
+      "short_name": "LV",
+      "market": "Las Vegas, NV",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Cashman Field (final game Oct 17, 2026)",
+        "capacity": 12500,
+        "utilization_pct": 21.5,
+        "planned_capacity": null,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2017,
+        "first_pro_season": 2018,
+        "current_head_coach": "Devin Rensing",
+        "coach_appointed_year": 2025,
+        "tier": "low"
+      },
+      "market_attendance": {
+        "avg_2yr": 2877.5
+      }
+    },
+    {
+      "club_id": "USL-023",
+      "display_name": "Miami FC",
+      "short_name": "MIA",
+      "market": "Miami, FL",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Pitbull Stadium (relocating)",
+        "capacity": 20000,
+        "utilization_pct": 6,
+        "planned_capacity": 15000,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": 2015,
+        "first_pro_season": 2016,
+        "current_head_coach": "Gastón Maddoni",
+        "coach_appointed_year": 2025,
+        "tier": "low"
+      },
+      "market_attendance": {
+        "avg_2yr": 1066.5
+      }
+    },
+    {
+      "club_id": "USL-024",
+      "display_name": "Loudoun United",
+      "short_name": "LDN",
+      "market": "Leesburg, VA",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Segra Field",
+        "capacity": 5000,
+        "utilization_pct": 46.7,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2019,
+        "current_head_coach": "Anthony Limbrick",
+        "coach_appointed_year": 2026,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 1969.5
+      }
+    },
+    {
+      "club_id": "USL-025",
+      "display_name": "Sporting JAX",
+      "short_name": "JAX",
+      "market": "Jacksonville, FL",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "No permanent home pre-launch",
+        "capacity": 12000,
+        "utilization_pct": 16.5,
+        "planned_capacity": 15000,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2022,
+        "first_pro_season": 2026,
+        "current_head_coach": "Liam Fox",
+        "coach_appointed_year": 2025,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 1980
+      }
+    },
+    {
+      "club_id": "USL-026",
+      "display_name": "Union Omaha",
+      "short_name": "UO",
+      "market": "Omaha, NE",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Werner Park",
+        "capacity": 6000,
+        "utilization_pct": 36.4,
+        "planned_capacity": 6500,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2019,
+        "first_pro_season": 2020,
+        "current_head_coach": "Vincenzo Candela",
+        "coach_appointed_year": 2024,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 2659.5
+      }
+    },
+    {
+      "club_id": "USL-027",
+      "display_name": "Greenville Triumph SC",
+      "short_name": "GVL",
+      "market": "Greenville, SC",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "GE Vernova Park (opened 2026)",
+        "capacity": 6300,
+        "utilization_pct": 39.2,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2019,
+        "current_head_coach": "Dave Dixon",
+        "coach_appointed_year": 2025,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 2264.5
+      }
+    },
+    {
+      "club_id": "USL-028",
+      "display_name": "Charlotte Independence",
+      "short_name": "CLT",
+      "market": "Charlotte, NC",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "American Legion Memorial Stadium",
+        "capacity": 10500,
+        "utilization_pct": 6.7,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2014,
+        "first_pro_season": 2015,
+        "current_head_coach": "Mike Jeffries",
+        "coach_appointed_year": 2019,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 713
+      }
+    },
+    {
+      "club_id": "USL-029",
+      "display_name": "One Knoxville SC",
+      "short_name": "KNX",
+      "market": "Knoxville, TN",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Covenant Health Park (opened 2025)",
+        "capacity": 6355,
+        "utilization_pct": 56,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2021,
+        "first_pro_season": 2022,
+        "current_head_coach": "Ian Fuller",
+        "coach_appointed_year": 2024,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 3311
+      }
+    },
+    {
+      "club_id": "USL-030",
+      "display_name": "Athletic Club Boise",
+      "short_name": "BOI",
+      "market": "Garden City, ID",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Expo Idaho / Les Bois Park",
+        "capacity": 7050,
+        "utilization_pct": 102.3,
+        "planned_capacity": 10000,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": 2024,
+        "first_pro_season": 2026,
+        "current_head_coach": "Nate Miller",
+        "coach_appointed_year": 2024,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 7212
+      }
+    },
+    {
+      "club_id": "USL-031",
+      "display_name": "Forward Madison FC",
+      "short_name": "MAD",
+      "market": "Madison, WI",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Breese Stevens Field",
+        "capacity": 5000,
+        "utilization_pct": 69.8,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2019,
+        "current_head_coach": "Matt Glaeser",
+        "coach_appointed_year": 2021,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 3788.5
+      }
+    },
+    {
+      "club_id": "USL-032",
+      "display_name": "Spokane Velocity FC",
+      "short_name": "SPK",
+      "market": "Spokane, WA",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "ONE Spokane Stadium",
+        "capacity": 5000,
+        "utilization_pct": 33.1,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2022,
+        "first_pro_season": 2024,
+        "current_head_coach": "Leigh Veidman",
+        "coach_appointed_year": 2023,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 1966
+      }
+    },
+    {
+      "club_id": "USL-033",
+      "display_name": "Chattanooga Red Wolves",
+      "short_name": "CHA",
+      "market": "East Ridge, TN",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "owned",
+        "current_venue": "CHI Memorial Stadium",
+        "capacity": 5500,
+        "utilization_pct": 26.1,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2018,
+        "first_pro_season": 2019,
+        "current_head_coach": "Scott Mackenzie",
+        "coach_appointed_year": 2023,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 1744
+      }
+    },
+    {
+      "club_id": "USL-034",
+      "display_name": "Portland Hearts of Pine",
+      "short_name": "POR",
+      "market": "Portland, ME",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Fitzpatrick Stadium",
+        "capacity": 5500,
+        "utilization_pct": 112.9,
+        "planned_capacity": 10000,
+        "plan_confidence": "proposed"
+      },
+      "continuity": {
+        "founded_year": 2023,
+        "first_pro_season": 2025,
+        "current_head_coach": "Bobby Murphy",
+        "coach_appointed_year": 2024,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 6034.5
+      }
+    },
+    {
+      "club_id": "USL-035",
+      "display_name": "New York Cosmos",
+      "short_name": "NYC",
+      "market": "Paterson, NJ",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Hinchliffe Stadium",
+        "capacity": 7500,
+        "utilization_pct": 22.5,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2025,
+        "first_pro_season": 2026,
+        "current_head_coach": "Davide Corti",
+        "coach_appointed_year": 2025,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 1425
+      }
+    },
+    {
+      "club_id": "USL-036",
+      "display_name": "AV Alta FC",
+      "short_name": "AVA",
+      "market": "Lancaster, CA",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Lancaster Municipal Stadium",
+        "capacity": 5300,
+        "utilization_pct": 67.8,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2023,
+        "first_pro_season": 2025,
+        "current_head_coach": "Brian Kleiban",
+        "coach_appointed_year": 2024,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 3979.5
+      }
+    },
+    {
+      "club_id": "USL-037",
+      "display_name": "Richmond Kickers",
+      "short_name": "RIC",
+      "market": "Richmond, VA",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "City Stadium",
+        "capacity": 22611,
+        "utilization_pct": 17.8,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 1993,
+        "first_pro_season": 1993,
+        "current_head_coach": "Brian Ownby (interim)",
+        "coach_appointed_year": 2026,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 4225
+      }
+    },
+    {
+      "club_id": "USL-038",
+      "display_name": "Fort Wayne FC",
+      "short_name": "FTW",
+      "market": "Fort Wayne, IN",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Ruoff Mortgage Stadium (opened 2026)",
+        "capacity": 11000,
+        "utilization_pct": 32,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2019,
+        "first_pro_season": 2026,
+        "current_head_coach": "Mike Avery",
+        "coach_appointed_year": 2020,
+        "tier": "high"
+      },
+      "market_attendance": {
+        "avg_2yr": 3426
+      }
+    },
+    {
+      "club_id": "USL-039",
+      "display_name": "Corpus Christi FC",
+      "short_name": "CCFC",
+      "market": "Corpus Christi, TX",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Cabaniss Athletic Complex (temporary)",
+        "capacity": 8000,
+        "utilization_pct": 14.3,
+        "planned_capacity": 5000,
+        "plan_confidence": "under_construction"
+      },
+      "continuity": {
+        "founded_year": 2017,
+        "first_pro_season": 2026,
+        "current_head_coach": "Éamon Zayed",
+        "coach_appointed_year": 2025,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 1256
+      }
+    },
+    {
+      "club_id": "USL-040",
+      "display_name": "Sarasota Paradise",
+      "short_name": "SAR",
+      "market": "Lakewood Ranch, FL",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Premier Sports Campus",
+        "capacity": 3000,
+        "utilization_pct": 59.5,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2022,
+        "first_pro_season": 2026,
+        "current_head_coach": "Mika Elovaara",
+        "coach_appointed_year": 2026,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 1617
+      }
+    },
+    {
+      "club_id": "USL-041",
+      "display_name": "FC Naples",
+      "short_name": "NAP",
+      "market": "Naples, FL",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Paradise Coast Sports Complex",
+        "capacity": 5000,
+        "utilization_pct": 54.3,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2024,
+        "first_pro_season": 2025,
+        "current_head_coach": "Zak Gordon (interim)",
+        "coach_appointed_year": 2026,
+        "tier": "moderate"
+      },
+      "market_attendance": {
+        "avg_2yr": 2911
+      }
+    },
+    {
+      "club_id": "USL-042",
+      "display_name": "Westchester SC",
+      "short_name": "WSC",
+      "market": "Mount Vernon, NY",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "groundshare",
+        "current_venue": "Mount Vernon Memorial Field",
+        "capacity": 3900,
+        "utilization_pct": 40.1,
+        "planned_capacity": null,
+        "plan_confidence": null
+      },
+      "continuity": {
+        "founded_year": 2024,
+        "first_pro_season": 2025,
+        "current_head_coach": "George Gjokaj",
+        "coach_appointed_year": 2025,
+        "tier": "low"
+      },
+      "market_attendance": {
+        "avg_2yr": 1715
+      }
+    },
+    {
+      "club_id": "USL-043",
+      "display_name": "OKC United",
+      "short_name": "OKC",
+      "market": "Oklahoma City, OK",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Oklahoma City Stadium",
+        "capacity": 10000,
+        "utilization_pct": null,
+        "planned_capacity": null,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": null,
+        "first_pro_season": 2028,
+        "current_head_coach": null,
+        "coach_appointed_year": 2026,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 5000
+      }
+    },
+    {
+      "club_id": "USL-044",
+      "display_name": "Atlético Dallas",
+      "short_name": "DAL",
+      "market": "Garland, TX",
+      "current_division": "Championship",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Fair Park",
+        "capacity": 40000,
+        "utilization_pct": null,
+        "planned_capacity": null,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": 2024,
+        "first_pro_season": 2027,
+        "current_head_coach": null,
+        "coach_appointed_year": 2026,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 5000
+      }
+    },
+    {
+      "club_id": "USL-045",
+      "display_name": "Sporting Cascades",
+      "short_name": "CAS",
+      "market": "Eugene, OR",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Civic Park",
+        "capacity": 3500,
+        "utilization_pct": null,
+        "planned_capacity": null,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": null,
+        "first_pro_season": 2027,
+        "current_head_coach": null,
+        "coach_appointed_year": 2026,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 5000
+      }
+    },
+    {
+      "club_id": "USL-046",
+      "display_name": "Fort Lauderdale United",
+      "short_name": "FLL",
+      "market": "Davie, FL",
+      "current_division": "League One",
+      "status": "active",
+      "stadium": {
+        "status": "leased_dedicated",
+        "current_venue": "Beyond Bancard Field at NSU",
+        "capacity": 7000,
+        "utilization_pct": null,
+        "planned_capacity": null,
+        "plan_confidence": "funded_confirmed"
+      },
+      "continuity": {
+        "founded_year": 2025,
+        "first_pro_season": 2028,
+        "current_head_coach": null,
+        "coach_appointed_year": 2028,
+        "tier": "new_club"
+      },
+      "market_attendance": {
+        "avg_2yr": 5000
+      }
+    }
+  ],
+  "performance_history": [
+    {
+      "club_id": "USL-001",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 37,
+      "ga": 36,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-002",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 21,
+      "gf": 27,
+      "ga": 17,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 21,
+      "gf": 28,
+      "ga": 19,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 33,
+      "ga": 32,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 23,
+      "gf": 25,
+      "ga": 23,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-006",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 20,
+      "gf": 30,
+      "ga": 23,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 20,
+      "gf": 24,
+      "ga": 24,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 20,
+      "gf": 29,
+      "ga": 20,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 38,
+      "ga": 20,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-010",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 23,
+      "gf": 28,
+      "ga": 31,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 31,
+      "ga": 30,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-012",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 31,
+      "ga": 26,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 33,
+      "ga": 31,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 23,
+      "gf": 39,
+      "ga": 29,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-015",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 20,
+      "gf": 24,
+      "ga": 30,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 46,
+      "ga": 27,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-017",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 20,
+      "gf": 18,
+      "ga": 20,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 21,
+      "gf": 26,
+      "ga": 19,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 28,
+      "ga": 26,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-020",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 23,
+      "gf": 24,
+      "ga": 41,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-021",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 20,
+      "gf": 22,
+      "ga": 36,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-022",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 28,
+      "ga": 32,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-023",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 25,
+      "ga": 39,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-024",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 21,
+      "gf": 22,
+      "ga": 34,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-025",
+      "season": 2026,
+      "division": "Championship",
+      "gp": 22,
+      "gf": 27,
+      "ga": 58,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-026",
+      "season": 2026,
+      "division": "League One",
+      "gp": 22,
+      "gf": 40,
+      "ga": 24,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2026,
+      "division": "League One",
+      "gp": 21,
+      "gf": 23,
+      "ga": 35,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2026,
+      "division": "League One",
+      "gp": 21,
+      "gf": 47,
+      "ga": 29,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-029",
+      "season": 2026,
+      "division": "League One",
+      "gp": 22,
+      "gf": 37,
+      "ga": 25,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-030",
+      "season": 2026,
+      "division": "League One",
+      "gp": 22,
+      "gf": 33,
+      "ga": 31,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2026,
+      "division": "League One",
+      "gp": 21,
+      "gf": 41,
+      "ga": 22,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-032",
+      "season": 2026,
+      "division": "League One",
+      "gp": 20,
+      "gf": 29,
+      "ga": 26,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2026,
+      "division": "League One",
+      "gp": 20,
+      "gf": 38,
+      "ga": 32,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-034",
+      "season": 2026,
+      "division": "League One",
+      "gp": 22,
+      "gf": 32,
+      "ga": 37,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-035",
+      "season": 2026,
+      "division": "League One",
+      "gp": 21,
+      "gf": 24,
+      "ga": 43,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-036",
+      "season": 2026,
+      "division": "League One",
+      "gp": 24,
+      "gf": 33,
+      "ga": 29,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2026,
+      "division": "League One",
+      "gp": 21,
+      "gf": 20,
+      "ga": 41,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-038",
+      "season": 2026,
+      "division": "League One",
+      "gp": 20,
+      "gf": 26,
+      "ga": 24,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-039",
+      "season": 2026,
+      "division": "League One",
+      "gp": 23,
+      "gf": 28,
+      "ga": 32,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-040",
+      "season": 2026,
+      "division": "League One",
+      "gp": 22,
+      "gf": 23,
+      "ga": 36,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-041",
+      "season": 2026,
+      "division": "League One",
+      "gp": 21,
+      "gf": 25,
+      "ga": 35,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-042",
+      "season": 2026,
+      "division": "League One",
+      "gp": 21,
+      "gf": 33,
+      "ga": 31,
+      "data_quality": "in_progress"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 56,
+      "ga": 19,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 62,
+      "ga": 32,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-017",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 48,
+      "ga": 36,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 32,
+      "ga": 28,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-024",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 45,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-006",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 29,
+      "ga": 29,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-002",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 33,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 44,
+      "ga": 52,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 43,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-023",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 29,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-015",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 36,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 50,
+      "ga": 30,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 44,
+      "ga": 27,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 45,
+      "ga": 41,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 47,
+      "ga": 45,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 48,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 39,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 44,
+      "ga": 45,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 35,
+      "ga": 47,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-012",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 31,
+      "ga": 42,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-010",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 42,
+      "ga": 52,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-020",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 27,
+      "ga": 45,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-022",
+      "season": 2025,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 23,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-029",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 43,
+      "ga": 26,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 42,
+      "ga": 30,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-032",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 41,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-041",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 40,
+      "ga": 32,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-026",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 51,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-034",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 48,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 45,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-036",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 42,
+      "ga": 47,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 31,
+      "ga": 43,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 38,
+      "ga": 43,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 43,
+      "ga": 53,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-042",
+      "season": 2025,
+      "division": "League One",
+      "gp": 30,
+      "gf": 43,
+      "ga": 59,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 86,
+      "ga": 43,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 68,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-002",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 46,
+      "ga": 32,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 49,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-006",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 56,
+      "ga": 41,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 55,
+      "ga": 46,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 41,
+      "ga": 28,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-015",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 44,
+      "ga": 51,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-017",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 39,
+      "ga": 52,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-024",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 44,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-023",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 26,
+      "ga": 89,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 46,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 48,
+      "ga": 40,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-022",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 49,
+      "ga": 46,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 46,
+      "ga": 34,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 38,
+      "ga": 45,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-010",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 37,
+      "ga": 57,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 33,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 36,
+      "ga": 49,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 33,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-020",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 29,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2024,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 27,
+      "ga": 46,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-026",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 47,
+      "ga": 24,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 35,
+      "ga": 18,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 39,
+      "ga": 28,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-029",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 23,
+      "ga": 16,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 37,
+      "ga": 31,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-032",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 26,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 25,
+      "ga": 34,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 28,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-012",
+      "season": 2024,
+      "division": "League One",
+      "gp": 22,
+      "gf": 33,
+      "ga": 42,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2016,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 52,
+      "ga": 27,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 58,
+      "ga": 31,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 71,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 58,
+      "ga": 41,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 28,
+      "ga": 12,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 61,
+      "ga": 37,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 65,
+      "ga": 28,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-001",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 41,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2016,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 38,
+      "ga": 33,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 53,
+      "ga": 33,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 47,
+      "ga": 34,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 44,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 49,
+      "ga": 60,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 41,
+      "ga": 77,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-016",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 47,
+      "ga": 43,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2016,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 31,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 33,
+      "ga": 42,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 47,
+      "ga": 26,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 58,
+      "ga": 30,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 52,
+      "ga": 34,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 50,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-005",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 50,
+      "ga": 29,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 50,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 44,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 61,
+      "ga": 33,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 55,
+      "ga": 23,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 73,
+      "ga": 33,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-009",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 60,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 45,
+      "ga": 42,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 48,
+      "ga": 29,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 21,
+      "ga": 19,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 32,
+      "ga": 47,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 41,
+      "ga": 55,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-007",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 46,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 45,
+      "ga": 43,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 47,
+      "ga": 32,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 50,
+      "ga": 43,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 27,
+      "ga": 17,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 36,
+      "ga": 42,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 48,
+      "ga": 34,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-003",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 51,
+      "ga": 26,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 50,
+      "ga": 37,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 63,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 89,
+      "ga": 36,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 46,
+      "ga": 17,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 68,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 50,
+      "ga": 58,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-011",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 54,
+      "ga": 41,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 43,
+      "ga": 47,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 70,
+      "ga": 40,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 54,
+      "ga": 43,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 18,
+      "ga": 18,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 44,
+      "ga": 37,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 49,
+      "ga": 59,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-013",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 46,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 42,
+      "ga": 36,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 24,
+      "ga": 14,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 56,
+      "ga": 34,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 56,
+      "ga": 52,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-014",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 41,
+      "ga": 51,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2016,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 37,
+      "ga": 27,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 53,
+      "ga": 55,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 36,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 31,
+      "ga": 65,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 19,
+      "ga": 28,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 61,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 59,
+      "ga": 53,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-004",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 49,
+      "ga": 42,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2016,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 36,
+      "ga": 36,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 45,
+      "ga": 24,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 45,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 62,
+      "ga": 57,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 16,
+      "gf": 30,
+      "ga": 14,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 50,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 54,
+      "ga": 26,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-019",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 63,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 59,
+      "ga": 57,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 15,
+      "gf": 23,
+      "ga": 17,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 44,
+      "ga": 40,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 49,
+      "ga": 40,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-008",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 51,
+      "ga": 49,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 45,
+      "ga": 69,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2020,
+      "division": "Championship",
+      "gp": 15,
+      "gf": 21,
+      "ga": 16,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 49,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 48,
+      "ga": 58,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-018",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 43,
+      "ga": 55,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-022",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 46,
+      "ga": 56,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-022",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 41,
+      "ga": 77,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-022",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 40,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-022",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 36,
+      "ga": 66,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-023",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 55,
+      "ga": 40,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-023",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 47,
+      "ga": 32,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-023",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 43,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-024",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 59,
+      "ga": 65,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-024",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 31,
+      "ga": 78,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-024",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 36,
+      "ga": 74,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-024",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 36,
+      "ga": 61,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-017",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 49,
+      "ga": 80,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-017",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 50,
+      "ga": 50,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-017",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 47,
+      "ga": 57,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-017",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 40,
+      "ga": 79,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-015",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 35,
+      "ga": 51,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-015",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 51,
+      "ga": 31,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-015",
+      "season": 2022,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 56,
+      "ga": 37,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-015",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 44,
+      "ga": 53,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-002",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 30,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-010",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 45,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-020",
+      "season": 2023,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 42,
+      "ga": 53,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2016,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 48,
+      "ga": 29,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 44,
+      "ga": 57,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2019,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 42,
+      "ga": 53,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2021,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 57,
+      "ga": 36,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2022,
+      "division": "League One",
+      "gp": 30,
+      "gf": 48,
+      "ga": 48,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-028",
+      "season": 2023,
+      "division": "League One",
+      "gp": 32,
+      "gf": 50,
+      "ga": 42,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2016,
+      "division": "Championship",
+      "gp": 30,
+      "gf": 33,
+      "ga": 26,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2017,
+      "division": "Championship",
+      "gp": 32,
+      "gf": 24,
+      "ga": 36,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2018,
+      "division": "Championship",
+      "gp": 34,
+      "gf": 30,
+      "ga": 80,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2019,
+      "division": "League One",
+      "gp": 28,
+      "gf": 26,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2020,
+      "division": "League One",
+      "gp": 16,
+      "gf": 22,
+      "ga": 22,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2021,
+      "division": "League One",
+      "gp": 28,
+      "gf": 35,
+      "ga": 36,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2022,
+      "division": "League One",
+      "gp": 30,
+      "gf": 54,
+      "ga": 35,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-037",
+      "season": 2023,
+      "division": "League One",
+      "gp": 32,
+      "gf": 42,
+      "ga": 55,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-026",
+      "season": 2020,
+      "division": "League One",
+      "gp": 16,
+      "gf": 20,
+      "ga": 15,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-026",
+      "season": 2021,
+      "division": "League One",
+      "gp": 28,
+      "gf": 44,
+      "ga": 22,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-026",
+      "season": 2022,
+      "division": "League One",
+      "gp": 30,
+      "gf": 34,
+      "ga": 33,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-026",
+      "season": 2023,
+      "division": "League One",
+      "gp": 32,
+      "gf": 61,
+      "ga": 41,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2019,
+      "division": "League One",
+      "gp": 28,
+      "gf": 32,
+      "ga": 22,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2020,
+      "division": "League One",
+      "gp": 16,
+      "gf": 24,
+      "ga": 11,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2021,
+      "division": "League One",
+      "gp": 28,
+      "gf": 36,
+      "ga": 29,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2022,
+      "division": "League One",
+      "gp": 30,
+      "gf": 40,
+      "ga": 38,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-027",
+      "season": 2023,
+      "division": "League One",
+      "gp": 32,
+      "gf": 45,
+      "ga": 40,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2019,
+      "division": "League One",
+      "gp": 28,
+      "gf": 33,
+      "ga": 26,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2020,
+      "division": "League One",
+      "gp": 16,
+      "gf": 20,
+      "ga": 14,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2021,
+      "division": "League One",
+      "gp": 28,
+      "gf": 32,
+      "ga": 34,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2022,
+      "division": "League One",
+      "gp": 30,
+      "gf": 34,
+      "ga": 44,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-031",
+      "season": 2023,
+      "division": "League One",
+      "gp": 32,
+      "gf": 38,
+      "ga": 40,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2019,
+      "division": "League One",
+      "gp": 28,
+      "gf": 35,
+      "ga": 37,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2020,
+      "division": "League One",
+      "gp": 15,
+      "gf": 21,
+      "ga": 17,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2021,
+      "division": "League One",
+      "gp": 28,
+      "gf": 37,
+      "ga": 29,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2022,
+      "division": "League One",
+      "gp": 30,
+      "gf": 52,
+      "ga": 39,
+      "data_quality": "real"
+    },
+    {
+      "club_id": "USL-033",
+      "season": 2023,
+      "division": "League One",
+      "gp": 32,
+      "gf": 46,
+      "ga": 65,
+      "data_quality": "real"
+    }
+  ],
+  "candidate_pool": [
+    {
+      "candidate_id": "CAND-02",
+      "display_name": "North Carolina FC",
+      "target_division": "League One",
+      "pool_status": "announced",
+      "stadium_confidence": null,
+      "projected_completion_year": null,
+      "championship_direct_eligible": false
+    },
+    {
+      "candidate_id": "CAND-04",
+      "display_name": "Santa Barbara Sky FC",
+      "target_division": "Championship",
+      "pool_status": "announced_high_risk",
+      "stadium_confidence": "insufficient_data",
+      "projected_completion_year": "Unknown",
+      "championship_direct_eligible": true
+    },
+    {
+      "candidate_id": "CAND-06",
+      "display_name": "Port St. Lucie SC",
+      "target_division": "League One",
+      "pool_status": "announced",
+      "stadium_confidence": "funded_confirmed",
+      "projected_completion_year": "Early 2028 (soft)",
+      "championship_direct_eligible": false
+    },
+    {
+      "candidate_id": "CAND-07",
+      "display_name": "Thousand Oaks FC",
+      "target_division": "League One",
+      "pool_status": "announced",
+      "stadium_confidence": "insufficient_data",
+      "projected_completion_year": "Unknown",
+      "championship_direct_eligible": false
+    },
+    {
+      "candidate_id": "CAND-08",
+      "display_name": "Salem City FC",
+      "target_division": "League One (aspirational only)",
+      "pool_status": "candidate (reclassify down)",
+      "stadium_confidence": "insufficient_data",
+      "projected_completion_year": "Unknown",
+      "championship_direct_eligible": false
+    },
+    {
+      "candidate_id": "CAND-09",
+      "display_name": "USL Long Island",
+      "target_division": "League One",
+      "pool_status": "announced",
+      "stadium_confidence": "none (venue arranged)",
+      "projected_completion_year": "2028 launch",
+      "championship_direct_eligible": false
+    },
+    {
+      "candidate_id": "CAND-10",
+      "display_name": "Reno City",
+      "target_division": "Championship",
+      "pool_status": "announced",
+      "stadium_confidence": "proposed",
+      "projected_completion_year": "2028 launch",
+      "championship_direct_eligible": true
+    }
+  ],
+  "candidate_cities": [
+    {
+      "metro_area": "New York-Newark-Jersey City, NY-NJ Metro Area",
+      "state": "NY",
+      "pop_2025": 20112448,
+      "existing_mls_clubs": [
+        "New York City FC",
+        "New York Red Bulls"
+      ],
+      "existing_usl_clubs": 4,
+      "engagement_score": 18.181818181818183,
+      "youth_score": 20.444444444444443,
+      "diaspora_score": 55.39999999999999,
+      "lower_tier_score": 100,
+      "composite_score": 48.506565656565655,
+      "theoretical_capacity": 6,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "San Francisco-Oakland-Fremont, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 4630041,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 63.63636363636363,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 60.099999999999994,
+      "lower_tier_score": 42.9,
+      "composite_score": 46.936868686868685,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Boston-Cambridge-Newton, MA-NH Metro Area",
+      "state": "MA",
+      "pop_2025": 5034221,
+      "existing_mls_clubs": [
+        "New England Revolution"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 81.81818181818183,
+      "youth_score": 64.66666666666666,
+      "diaspora_score": 28.9,
+      "lower_tier_score": 4.8,
+      "composite_score": 45.04621212121213,
+      "theoretical_capacity": 2,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area",
+      "state": "DC",
+      "pop_2025": 6465724,
+      "existing_mls_clubs": [
+        "D.C. United"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 72.72727272727273,
+      "youth_score": 19.777777777777775,
+      "diaspora_score": 40.2,
+      "lower_tier_score": 38.1,
+      "composite_score": 42.701262626262626,
+      "theoretical_capacity": 2,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 6391072,
+      "existing_mls_clubs": [
+        "Inter Miami CF"
+      ],
+      "existing_usl_clubs": 1,
+      "engagement_score": 27.27272727272727,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 87.7,
+      "lower_tier_score": 28.6,
+      "composite_score": 41.44873737373737,
+      "theoretical_capacity": 2,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Cincinnati, OH-KY-IN Metro Area",
+      "state": "OH",
+      "pop_2025": 2312858,
+      "existing_mls_clubs": [
+        "FC Cincinnati"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 22.727272727272727,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 0,
+      "lower_tier_score": 100,
+      "composite_score": 38.515151515151516,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Austin-Round Rock-San Marcos, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 2620945,
+      "existing_mls_clubs": [
+        "Austin FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 100,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 2.9,
+      "lower_tier_score": 9.5,
+      "composite_score": 37.044444444444444,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Chicago-Naperville-Elgin, IL-IN Metro Area",
+      "state": "IL",
+      "pop_2025": 9434123,
+      "existing_mls_clubs": [
+        "Chicago Fire FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 36.36363636363637,
+      "youth_score": 40,
+      "diaspora_score": 25.2,
+      "lower_tier_score": 47.6,
+      "composite_score": 37.290909090909096,
+      "theoretical_capacity": 3,
+      "remaining_capacity": 2
+    },
+    {
+      "metro_area": "Virginia Beach-Chesapeake-Norfolk, VA-NC Metro Area",
+      "state": "VA",
+      "pop_2025": 1797213,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 19.11111111111111,
+      "diaspora_score": 87.4,
+      "lower_tier_score": 28.6,
+      "composite_score": 33.77777777777778,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Wilmington, NC Metro Area",
+      "state": "NC",
+      "pop_2025": 492772,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 100,
+      "lower_tier_score": 9.5,
+      "composite_score": 32.93055555555556,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Seattle-Tacoma-Bellevue, WA Metro Area",
+      "state": "WA",
+      "pop_2025": 4161883,
+      "existing_mls_clubs": [
+        "Seattle Sounders FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 22.727272727272727,
+      "youth_score": 36.00000000000001,
+      "diaspora_score": 31.5,
+      "lower_tier_score": 42.9,
+      "composite_score": 33.28181818181818,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Dallas-Fort Worth-Arlington, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 8477157,
+      "existing_mls_clubs": [
+        "FC Dallas"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 54.54545454545454,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 27.3,
+      "lower_tier_score": 9.5,
+      "composite_score": 31.780808080808075,
+      "theoretical_capacity": 3,
+      "remaining_capacity": 2
+    },
+    {
+      "metro_area": "Kansas City, MO-KS Metro Area",
+      "state": "MO",
+      "pop_2025": 2270682,
+      "existing_mls_clubs": [
+        "Sporting Kansas City"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 86.36363636363636,
+      "youth_score": 36.666666666666664,
+      "diaspora_score": 0.1,
+      "lower_tier_score": 0,
+      "composite_score": 30.782575757575756,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Los Angeles-Long Beach-Anaheim, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 12844441,
+      "existing_mls_clubs": [
+        "LA Galaxy",
+        "Los Angeles FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 4.545454545454546,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 62.2,
+      "lower_tier_score": 38.1,
+      "composite_score": 31.489141414141415,
+      "theoretical_capacity": 4,
+      "remaining_capacity": 2
+    },
+    {
+      "metro_area": "San Jose-Sunnyvale-Santa Clara, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 1984473,
+      "existing_mls_clubs": [
+        "San Jose Earthquakes"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 83.5,
+      "lower_tier_score": 9.5,
+      "composite_score": 28.52777777777778,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "San Diego-Chula Vista-Carlsbad, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 3282248,
+      "existing_mls_clubs": [
+        "San Diego FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 59.09090909090909,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 36.2,
+      "lower_tier_score": 0,
+      "composite_score": 29.100505050505053,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Bridgeport-Stamford-Danbury, CT Metro Area",
+      "state": "CT",
+      "pop_2025": 978179,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 55.77777777777777,
+      "diaspora_score": 37.5,
+      "lower_tier_score": 9.5,
+      "composite_score": 25.694444444444443,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Portland-South Portland, ME Metro Area",
+      "state": "ME",
+      "pop_2025": 577635,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 100,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 25,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "St. Louis, MO-IL Metro Area",
+      "state": "MO",
+      "pop_2025": 2814421,
+      "existing_mls_clubs": [
+        "St. Louis City SC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 54.54545454545454,
+      "youth_score": 36.666666666666664,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 22.8030303030303,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Providence-Warwick, RI-MA Metro Area",
+      "state": "RI",
+      "pop_2025": 1708161,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 31.818181818181817,
+      "youth_score": 58.44444444444444,
+      "diaspora_score": 1.1,
+      "lower_tier_score": 0,
+      "composite_score": 22.840656565656563,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Wichita, KS Metro Area",
+      "state": "KS",
+      "pop_2025": 663809,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 35.33333333333333,
+      "diaspora_score": 46.5,
+      "lower_tier_score": 4.8,
+      "composite_score": 21.65833333333333,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Houston-Pasadena-The Woodlands, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 7904627,
+      "existing_mls_clubs": [
+        "Houston Dynamo FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 40.2,
+      "lower_tier_score": 9.5,
+      "composite_score": 21.369444444444444,
+      "theoretical_capacity": 2,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Atlanta-Sandy Springs-Roswell, GA Metro Area",
+      "state": "GA",
+      "pop_2025": 6482182,
+      "existing_mls_clubs": [
+        "Atlanta United FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 40.909090909090914,
+      "youth_score": 21.999999999999993,
+      "diaspora_score": 9.6,
+      "lower_tier_score": 14.3,
+      "composite_score": 21.702272727272724,
+      "theoretical_capacity": 2,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Manchester-Nashua, NH Metro Area",
+      "state": "NH",
+      "pop_2025": 433415,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 83.33333333333333,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 20.833333333333332,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "McAllen-Edinburg-Mission, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 921549,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 44.9,
+      "lower_tier_score": 0,
+      "composite_score": 20.169444444444444,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "El Paso, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 881291,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 22.727272727272727,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 21.7,
+      "lower_tier_score": 0,
+      "composite_score": 20.051262626262623,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Winston-Salem, NC Metro Area",
+      "state": "NC",
+      "pop_2025": 712206,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 53.5,
+      "lower_tier_score": 0,
+      "composite_score": 18.930555555555557,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Salinas, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 433729,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 54.1,
+      "lower_tier_score": 0,
+      "composite_score": 18.802777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Brownsville-Harlingen, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 433946,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 37.3,
+      "lower_tier_score": 0,
+      "composite_score": 18.269444444444442,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Tulsa, OK Metro Area",
+      "state": "OK",
+      "pop_2025": 1069273,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 12.222222222222218,
+      "diaspora_score": 59.8,
+      "lower_tier_score": 0,
+      "composite_score": 18.005555555555553,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Springfield, MA Metro Area",
+      "state": "MA",
+      "pop_2025": 464338,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 64.66666666666666,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 17.366666666666664,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Sacramento-Roseville-Folsom, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 2477274,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 27.6,
+      "lower_tier_score": 19,
+      "composite_score": 16.927777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Worcester, MA Metro Area",
+      "state": "MA",
+      "pop_2025": 888502,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 64.66666666666666,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 16.166666666666664,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Minneapolis-St. Paul-Bloomington, MN-WI Metro Area",
+      "state": "MN",
+      "pop_2025": 3790295,
+      "existing_mls_clubs": [
+        "Minnesota United FC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 46.44444444444444,
+      "diaspora_score": 3,
+      "lower_tier_score": 14.3,
+      "composite_score": 15.93611111111111,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Stockton-Lodi, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 823815,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 42.5,
+      "lower_tier_score": 0,
+      "composite_score": 15.902777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Naples-Marco Island, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 417131,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 40.9,
+      "lower_tier_score": 0,
+      "composite_score": 15.780555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Hartford-West Hartford-East Hartford, CT Metro Area",
+      "state": "CT",
+      "pop_2025": 1171426,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 9.090909090909092,
+      "youth_score": 55.77777777777777,
+      "diaspora_score": 0.1,
+      "lower_tier_score": 0,
+      "composite_score": 16.242171717171715,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metro Area",
+      "state": "PA",
+      "pop_2025": 6329118,
+      "existing_mls_clubs": [
+        "Philadelphia Union"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 7.1,
+      "lower_tier_score": 19,
+      "composite_score": 14.913888888888888,
+      "theoretical_capacity": 2,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Orlando-Kissimmee-Sanford, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 2957672,
+      "existing_mls_clubs": [
+        "Orlando City SC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 31.8,
+      "lower_tier_score": 4.8,
+      "composite_score": 14.705555555555556,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Youngstown-Warren, OH Metro Area",
+      "state": "OH",
+      "pop_2025": 423678,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 27,
+      "lower_tier_score": 0,
+      "composite_score": 14.583333333333332,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Charlotte-Concord-Gastonia, NC-SC Metro Area",
+      "state": "NC",
+      "pop_2025": 2938830,
+      "existing_mls_clubs": [
+        "Charlotte FC"
+      ],
+      "existing_usl_clubs": 1,
+      "engagement_score": 13.636363636363635,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 2.1,
+      "lower_tier_score": 23.8,
+      "composite_score": 15.439646464646465,
+      "theoretical_capacity": 1,
+      "remaining_capacity": -1
+    },
+    {
+      "metro_area": "Denver-Aurora-Centennial, CO Metro Area",
+      "state": "CO",
+      "pop_2025": 3092037,
+      "existing_mls_clubs": [
+        "Colorado Rapids"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 9.090909090909092,
+      "youth_score": 29.777777777777775,
+      "diaspora_score": 2.7,
+      "lower_tier_score": 19,
+      "composite_score": 15.142171717171717,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Santa Maria-Santa Barbara, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 442065,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 34.6,
+      "lower_tier_score": 0,
+      "composite_score": 13.927777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Oxnard-Thousand Oaks-Ventura, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 830851,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 34.6,
+      "lower_tier_score": 0,
+      "composite_score": 13.927777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Visalia, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 485146,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 34.6,
+      "lower_tier_score": 0,
+      "composite_score": 13.927777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "New Haven, CT Metro Area",
+      "state": "CT",
+      "pop_2025": 578741,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 55.77777777777777,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 13.944444444444443,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Waterbury-Shelton, CT Metro Area",
+      "state": "CT",
+      "pop_2025": 463349,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 55.77777777777777,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 13.944444444444443,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Baltimore-Columbia-Towson, MD Metro Area",
+      "state": "MD",
+      "pop_2025": 2857781,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 13.636363636363635,
+      "youth_score": 19.777777777777775,
+      "diaspora_score": 2.1,
+      "lower_tier_score": 23.8,
+      "composite_score": 14.828535353535354,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Des Moines-West Des Moines, IA Metro Area",
+      "state": "IA",
+      "pop_2025": 758539,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 55.55555555555556,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 13.88888888888889,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Modesto, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 557719,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 31.5,
+      "lower_tier_score": 0,
+      "composite_score": 13.152777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Vallejo, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 455376,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 31,
+      "lower_tier_score": 0,
+      "composite_score": 13.027777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Bakersfield-Delano, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 927068,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 29.4,
+      "lower_tier_score": 0,
+      "composite_score": 12.627777777777776,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Fresno, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 1203383,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 28.9,
+      "lower_tier_score": 0,
+      "composite_score": 12.502777777777776,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Cape Coral-Fort Myers, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 875607,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 26,
+      "lower_tier_score": 0,
+      "composite_score": 12.055555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Detroit-Warren-Dearborn, MI Metro Area",
+      "state": "MI",
+      "pop_2025": 4390913,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 29.777777777777775,
+      "diaspora_score": 3.8,
+      "lower_tier_score": 14.3,
+      "composite_score": 11.969444444444445,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "San Antonio-New Braunfels, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 2813140,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 2.1,
+      "lower_tier_score": 9.5,
+      "composite_score": 11.844444444444443,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Las Vegas-Henderson-North Las Vegas, NV Metro Area",
+      "state": "NV",
+      "pop_2025": 2407226,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 12.888888888888886,
+      "diaspora_score": 33.9,
+      "lower_tier_score": 0,
+      "composite_score": 11.697222222222221,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Milwaukee-Waukesha, WI Metro Area",
+      "state": "WI",
+      "pop_2025": 1575010,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 41.77777777777777,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 11.644444444444442,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Cleveland, OH Metro Area",
+      "state": "OH",
+      "pop_2025": 2165775,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 0,
+      "lower_tier_score": 14.3,
+      "composite_score": 11.408333333333331,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Pittsburgh, PA Metro Area",
+      "state": "PA",
+      "pop_2025": 2421992,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 9.5,
+      "composite_score": 10.763888888888888,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Richmond, VA Metro Area",
+      "state": "VA",
+      "pop_2025": 1389338,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 18.181818181818183,
+      "youth_score": 19.11111111111111,
+      "diaspora_score": 0,
+      "lower_tier_score": 9.5,
+      "composite_score": 11.698232323232324,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Madison, WI Metro Area",
+      "state": "WI",
+      "pop_2025": 709685,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 41.77777777777777,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 10.444444444444443,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Columbus, OH Metro Area",
+      "state": "OH",
+      "pop_2025": 2242028,
+      "existing_mls_clubs": [
+        "Columbus Crew"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 0.8,
+      "lower_tier_score": 9.5,
+      "composite_score": 10.408333333333331,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Santa Rosa-Petaluma, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 486444,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 20.5,
+      "lower_tier_score": 0,
+      "composite_score": 10.402777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Portland-Vancouver-Hillsboro, OR-WA Metro Area",
+      "state": "OR",
+      "pop_2025": 2542282,
+      "existing_mls_clubs": [
+        "Portland Timbers"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 34.444444444444436,
+      "diaspora_score": 2,
+      "lower_tier_score": 4.8,
+      "composite_score": 10.311111111111108,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Tucson, AZ Metro Area",
+      "state": "AZ",
+      "pop_2025": 1074685,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 19.555555555555554,
+      "diaspora_score": 20.2,
+      "lower_tier_score": 0,
+      "composite_score": 9.938888888888888,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Lancaster, PA Metro Area",
+      "state": "PA",
+      "pop_2025": 563159,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 9.588888888888887,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Reading, PA Metro Area",
+      "state": "PA",
+      "pop_2025": 440072,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 9.588888888888887,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Springfield, MO Metro Area",
+      "state": "MO",
+      "pop_2025": 500694,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 36.666666666666664,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 9.166666666666666,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Spokane-Spokane Valley, WA Metro Area",
+      "state": "WA",
+      "pop_2025": 608012,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 36.00000000000001,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 9.000000000000002,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Dayton-Kettering-Beavercreek, OH Metro Area",
+      "state": "OH",
+      "pop_2025": 826554,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 9.033333333333331,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Toledo, OH Metro Area",
+      "state": "OH",
+      "pop_2025": 599376,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 9.033333333333331,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Corpus Christi, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 451191,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 8.944444444444443,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Killeen-Temple, TX Metro Area",
+      "state": "TX",
+      "pop_2025": 511497,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 35.77777777777777,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 8.944444444444443,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Buffalo-Cheektowaga, NY Metro Area",
+      "state": "NY",
+      "pop_2025": 1155653,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 14.3,
+      "composite_score": 8.68611111111111,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Salem, OR Metro Area",
+      "state": "OR",
+      "pop_2025": 445814,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 34.444444444444436,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 8.611111111111109,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Grand Rapids-Wyoming-Kentwood, MI Metro Area",
+      "state": "MI",
+      "pop_2025": 1183645,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 29.777777777777775,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 8.644444444444444,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Allentown-Bethlehem-Easton, PA-NJ Metro Area",
+      "state": "PA",
+      "pop_2025": 887615,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 8.388888888888888,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Harrisburg-Carlisle, PA Metro Area",
+      "state": "PA",
+      "pop_2025": 617427,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 8.388888888888888,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Scranton--Wilkes-Barre, PA Metro Area",
+      "state": "PA",
+      "pop_2025": 574418,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 8.388888888888888,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "York-Hanover, PA Metro Area",
+      "state": "PA",
+      "pop_2025": 473197,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 33.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 8.388888888888888,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Urban Honolulu, HI Metro Area",
+      "state": "HI",
+      "pop_2025": 988703,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 5.555555555555555,
+      "diaspora_score": 27.800000000000004,
+      "lower_tier_score": 0,
+      "composite_score": 8.33888888888889,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Asheville, NC Metro Area",
+      "state": "NC",
+      "pop_2025": 422345,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 9.5,
+      "composite_score": 7.930555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Riverside-San Bernardino-Ontario, CA Metro Area",
+      "state": "CA",
+      "pop_2025": 4769007,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.111111111111107,
+      "diaspora_score": 10.4,
+      "lower_tier_score": 0,
+      "composite_score": 7.877777777777776,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Akron, OH Metro Area",
+      "state": "OH",
+      "pop_2025": 701780,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 7.833333333333331,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Canton-Massillon, OH Metro Area",
+      "state": "OH",
+      "pop_2025": 400246,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 31.333333333333325,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 7.833333333333331,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Rochester, NY Metro Area",
+      "state": "NY",
+      "pop_2025": 1056149,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 9.5,
+      "composite_score": 7.486111111111111,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Colorado Springs, CO Metro Area",
+      "state": "CO",
+      "pop_2025": 781796,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 29.777777777777775,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 7.444444444444444,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Flint, MI Metro Area",
+      "state": "MI",
+      "pop_2025": 401093,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 29.777777777777775,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 7.444444444444444,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Lansing-East Lansing, MI Metro Area",
+      "state": "MI",
+      "pop_2025": 479722,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 29.777777777777775,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 7.444444444444444,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Omaha, NE-IA Metro Area",
+      "state": "NE",
+      "pop_2025": 1009836,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 29.11111111111111,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 7.277777777777778,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Birmingham, AL Metro Area",
+      "state": "AL",
+      "pop_2025": 1197766,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 27.77777777777778,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 6.944444444444445,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Huntsville, AL Metro Area",
+      "state": "AL",
+      "pop_2025": 556444,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 27.77777777777778,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 6.944444444444445,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Mobile, AL Metro Area",
+      "state": "AL",
+      "pop_2025": 411658,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 27.77777777777778,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 6.944444444444445,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Indianapolis-Carmel-Greenwood, IN Metro Area",
+      "state": "IN",
+      "pop_2025": 2205695,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 27.111111111111107,
+      "diaspora_score": 0.5,
+      "lower_tier_score": 0,
+      "composite_score": 6.902777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Raleigh-Cary, NC Metro Area",
+      "state": "NC",
+      "pop_2025": 1595720,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0.6,
+      "lower_tier_score": 4.8,
+      "composite_score": 6.905555555555556,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Fort Wayne, IN Metro Area",
+      "state": "IN",
+      "pop_2025": 466258,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 27.111111111111107,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 6.777777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Palm Bay-Melbourne-Titusville, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 663982,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 6.7555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Tampa-St. Petersburg-Clearwater, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 3418895,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 4.3,
+      "lower_tier_score": 0,
+      "composite_score": 6.6305555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Phoenix-Mesa-Chandler, AZ Metro Area",
+      "state": "AZ",
+      "pop_2025": 5228938,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 19.555555555555554,
+      "diaspora_score": 6.6000000000000005,
+      "lower_tier_score": 0,
+      "composite_score": 6.538888888888889,
+      "theoretical_capacity": 2,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Columbia, SC Metro Area",
+      "state": "SC",
+      "pop_2025": 879918,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.66666666666666,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 6.366666666666665,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Lexington-Fayette, KY Metro Area",
+      "state": "KY",
+      "pop_2025": 535174,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 25.333333333333336,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 6.333333333333334,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Louisville/Jefferson County, KY-IN Metro Area",
+      "state": "KY",
+      "pop_2025": 1402509,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 25.333333333333336,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 6.333333333333334,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Kiryas Joel-Poughkeepsie-Newburgh, NY Metro Area",
+      "state": "NY",
+      "pop_2025": 718377,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 4.8,
+      "composite_score": 6.311111111111111,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Deltona-Daytona Beach-Ormond Beach, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 746933,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Durham-Chapel Hill, NC Metro Area",
+      "state": "NC",
+      "pop_2025": 625485,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Greensboro-High Point, NC Metro Area",
+      "state": "NC",
+      "pop_2025": 805945,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Jacksonville, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 1785500,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0.2,
+      "lower_tier_score": 0,
+      "composite_score": 5.605555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Lakeland-Winter Haven, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 874790,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "North Port-Bradenton-Sarasota, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 948158,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Ocala, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 442660,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Pensacola-Ferry Pass-Brent, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 544949,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Port St. Lucie, FL Metro Area",
+      "state": "FL",
+      "pop_2025": 568721,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 22.22222222222222,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.555555555555555,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area",
+      "state": "TN",
+      "pop_2025": 2197416,
+      "existing_mls_clubs": [
+        "Nashville SC"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.55555555555555,
+      "diaspora_score": 0.6,
+      "lower_tier_score": 0,
+      "composite_score": 5.538888888888888,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Savannah, GA Metro Area",
+      "state": "GA",
+      "pop_2025": 438314,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.999999999999993,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.499999999999998,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Augusta-Richmond County, GA-SC Metro Area",
+      "state": "GA",
+      "pop_2025": 641231,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.999999999999993,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.499999999999998,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Chattanooga, TN-GA Metro Area",
+      "state": "TN",
+      "pop_2025": 594530,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 21.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.3888888888888875,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Knoxville, TN Metro Area",
+      "state": "TN",
+      "pop_2025": 968137,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 21.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.3888888888888875,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Memphis, TN-MS-AR Metro Area",
+      "state": "TN",
+      "pop_2025": 1341412,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 21.55555555555555,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.3888888888888875,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Charleston-North Charleston, SC Metro Area",
+      "state": "SC",
+      "pop_2025": 889263,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 20.66666666666666,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.166666666666665,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Greenville-Anderson-Greer, SC Metro Area",
+      "state": "SC",
+      "pop_2025": 1014101,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 20.66666666666666,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.166666666666665,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Spartanburg, SC Metro Area",
+      "state": "SC",
+      "pop_2025": 407656,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.66666666666666,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.166666666666665,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Myrtle Beach-Conway-North Myrtle Beach, SC Metro Area",
+      "state": "SC",
+      "pop_2025": 427551,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.66666666666666,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.166666666666665,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Albany-Schenectady-Troy, NY Metro Area",
+      "state": "NY",
+      "pop_2025": 915835,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.111111111111111,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Syracuse, NY Metro Area",
+      "state": "NY",
+      "pop_2025": 652273,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 20.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 5.111111111111111,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Jackson, MS Metro Area",
+      "state": "MS",
+      "pop_2025": 609847,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 10,
+      "diaspora_score": 0,
+      "lower_tier_score": 9.5,
+      "composite_score": 4.875,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Ogden, UT Metro Area",
+      "state": "UT",
+      "pop_2025": 672784,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 18.666666666666664,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 4.666666666666666,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Provo-Orem-Lehi, UT Metro Area",
+      "state": "UT",
+      "pop_2025": 773426,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 18.666666666666664,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 4.666666666666666,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Salt Lake City-Murray, UT Metro Area",
+      "state": "UT",
+      "pop_2025": 1308377,
+      "existing_mls_clubs": [
+        "Real Salt Lake"
+      ],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 18.666666666666664,
+      "diaspora_score": 0.1,
+      "lower_tier_score": 0,
+      "composite_score": 4.691666666666666,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Baton Rouge, LA Metro Area",
+      "state": "LA",
+      "pop_2025": 888699,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 14.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 3.6111111111111107,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "New Orleans-Metairie, LA Metro Area",
+      "state": "LA",
+      "pop_2025": 970849,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 14.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 3.6111111111111107,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Lafayette, LA Metro Area",
+      "state": "LA",
+      "pop_2025": 423758,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 14.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 3.6111111111111107,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Reno, NV Metro Area",
+      "state": "NV",
+      "pop_2025": 578734,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 12.888888888888886,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 3.2222222222222214,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    },
+    {
+      "metro_area": "Oklahoma City, OK Metro Area",
+      "state": "OK",
+      "pop_2025": 1512813,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 12.222222222222218,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 3.0555555555555545,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Boise City, ID Metro Area",
+      "state": "ID",
+      "pop_2025": 864243,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 11.11111111111111,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 2.7777777777777777,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Gulfport-Biloxi, MS Metro Area",
+      "state": "MS",
+      "pop_2025": 431329,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 10,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 2.5,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Fayetteville-Springdale-Rogers, AR Metro Area",
+      "state": "AR",
+      "pop_2025": 622177,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 4.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 1.1111111111111107,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Little Rock-North Little Rock-Conway, AR Metro Area",
+      "state": "AR",
+      "pop_2025": 777607,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 4.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 1.1111111111111107,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Anchorage, AK Metro Area",
+      "state": "AK",
+      "pop_2025": 405821,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 0,
+      "engagement_score": 0,
+      "youth_score": 4.444444444444443,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 1.1111111111111107,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 1
+    },
+    {
+      "metro_area": "Albuquerque, NM Metro Area",
+      "state": "NM",
+      "pop_2025": 925279,
+      "existing_mls_clubs": [],
+      "existing_usl_clubs": 1,
+      "engagement_score": 0,
+      "youth_score": 0,
+      "diaspora_score": 0,
+      "lower_tier_score": 0,
+      "composite_score": 0,
+      "theoretical_capacity": 1,
+      "remaining_capacity": 0
+    }
+  ],
+  "config": {
+    "stability_formula": {
+      "weights": {
+        "stadium": 0.3,
+        "market_attendance": 0.3,
+        "continuity": 0.2,
+        "longevity": 0.2
+      },
+      "stadium": {
+        "control_base": {
+          "owned": 70,
+          "leased_dedicated": 55,
+          "groundshare": 35
+        },
+        "capacity_score_floor": 3000,
+        "capacity_score_ceiling": 15000,
+        "capacity_score_max": 30,
+        "utilization_full_credit_pct": 60,
+        "plan_confidence_multiplier": {
+          "funded_confirmed": 1.0,
+          "under_construction": 1.0,
+          "proposed": 0.5,
+          "none": 0.0
+        },
+        "hard_ceiling": 100
+      },
+      "market_attendance": {
+        "utilization_bonus_threshold_pct": 90,
+        "utilization_bonus_cap_pct": 130,
+        "utilization_bonus_max_multiplier": 1.15,
+        "new_club_placeholder": "global_average"
+      },
+      "continuity": {
+        "high": 90,
+        "moderate": 65,
+        "new_club": 50,
+        "low": 30
+      },
+      "longevity": {
+        "linear_segment_max_years": 10,
+        "linear_segment_max_points": 80,
+        "tail_decay_rate": 22,
+        "asymptote": 100
+      }
+    },
+    "performance_rating": {
+      "pythagorean_exponent": 1.35,
+      "historical_lookback_max_years": 10,
+      "decay_rate": 0.7,
+      "reversion_rate_min": 0.25,
+      "reversion_rate_max": 0.3,
+      "reversion_symmetric": true,
+      "reversion_magnitude_scaling": false
+    },
+    "reputation_momentum": {
+      "rolling_window_years": 5,
+      "hard_ceiling": 15,
+      "division_weights": {
+        "premier": 1.0,
+        "championship": 0.6,
+        "league_one": 0.35
+      },
+      "triggers": {
+        "league_title_or_shield": 6,
+        "promoted": 5,
+        "top3_not_promoted": 2,
+        "bottom3_not_relegated": -2,
+        "relegated": -5,
+        "usl_cup_win": 6,
+        "open_cup_deep_run": 2
+      },
+      "stacking": "additive_within_season",
+      "mid_table_no_movement": 0,
+      "note": "League/promotion triggers are mutually exclusive per season - only the single best-applicable row fires. Cup triggers are a separate bucket and DO stack alongside a league trigger in the same season."
+    },
+    "cup_simulation": {
+      "usl_cup": {
+        "premier_win_probability": 0.9,
+        "championship_win_probability": 0.1,
+        "league_one_win_probability": 0
+      },
+      "us_open_cup": {
+        "deepest_run_always_from": "premier_top_5"
+      },
+      "winner_selection": "performance_weighted_dampened"
+    },
+    "expansion_engine": {
+      "championship_direct_window": {
+        "start_year": 2028,
+        "end_year": 2029
+      },
+      "league_one_only_from_year": 2030,
+      "selection_weights": {
+        "automatic_mode": {
+          "baseline": 1,
+          "announced": 3,
+          "announced_and_due": 15
+        },
+        "manual_mode_dealt_hand": {
+          "baseline": 1,
+          "announced": 3,
+          "announced_and_due": 6
+        }
+      },
+      "manual_mode_hand_size_min": 3,
+      "manual_mode_hand_size_max": 5,
+      "pace_distribution": {
+        "0": "common",
+        "1": "most_common",
+        "2": "common",
+        "3": "uncommon",
+        "4": "rare",
+        "5+": "effectively_never"
+      },
+      "hypothetical_stadium_odds": {
+        "control_status": {
+          "groundshare": 0.62,
+          "owned": 0.19,
+          "leased_dedicated": 0.19
+        },
+        "groundshare_plan_status": {
+          "none": 0.58,
+          "proposed": 0.31,
+          "funded_confirmed": 0.08,
+          "under_construction": 0.04
+        }
+      },
+      "hypothetical_naming": {
+        "rule": "if candidate_pool club, use display_name. Otherwise use '[City] USL Team' placeholder. Manual mode allows fan to override with custom text before confirming."
+      },
+      "hypothetical_new_club_seed": {
+        "market_attendance": "global_average_across_all_active_clubs",
+        "performance_rating": "seeded_from_own_stability_score",
+        "continuity_tier": "new_club"
+      }
+    },
+    "tiebreakers": {
+      "order": [
+        "head_to_head_points",
+        "head_to_head_goal_diff",
+        "total_wins",
+        "season_goal_diff",
+        "season_goals_scored",
+        "lottery"
+      ],
+      "excluded": [
+        "disciplinary_points",
+        "conference_only_tiers"
+      ]
+    }
+  }
+}

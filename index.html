@@ -1,89 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>USL Future Pyramid — Coming Soon</title>
-<meta name="description" content="An interactive simulator for exploring USL promotion and relegation, starting in 2028." />
+<meta charset="UTF-8">
+<title>USL Pro/Rel Simulator — MVP</title>
 <style>
-  * { box-sizing: border-box; margin:0; padding:0; }
-  body {
-    background: #f3ecd9;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #241d12;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-  }
-  .card {
-    max-width: 640px;
-    width: 100%;
-    text-align: center;
-    border: 3px double #241d12;
-    padding: 56px 40px;
-    background: #faf6ea;
-  }
-  .kicker {
-    font-size: 11px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #6b5d3f;
-    margin-bottom: 14px;
-  }
-  h1 {
-    font-size: 34px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    line-height: 1.25;
-  }
-  .sub {
-    margin-top: 14px;
-    font-size: 15px;
-    font-style: italic;
-    color: #5a4d33;
-    line-height: 1.6;
-  }
-  .divider {
-    width: 60px;
-    height: 2px;
-    background: #c9960c;
-    margin: 28px auto;
-  }
-  .crests {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-  .status {
-    font-size: 12.5px;
-    color: #6b5d3f;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-family: -apple-system, Arial, sans-serif;
-    font-weight: 700;
-  }
-  .status span {
-    color: #2f8f45;
-  }
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 900px; margin: 20px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 22px; border-bottom: 2px solid #333; padding-bottom: 8px; }
+  h2 { font-size: 18px; margin-top: 28px; background: #1F3864; color: white; padding: 6px 10px; }
+  h3 { font-size: 15px; margin-top: 18px; color: #1F3864; }
+  fieldset { margin-bottom: 14px; border: 1px solid #999; padding: 10px 14px; }
+  legend { font-weight: bold; color: #1F3864; }
+  label { display: inline-block; min-width: 220px; margin: 4px 0; }
+  input[type=number] { width: 70px; }
+  select { min-width: 260px; padding: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 20px 0; font-size: 13px; }
+  th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; }
+  th { background: #DDEBF7; }
+  tr:nth-child(even) { background: #f7f7f7; }
+  tr.row-promoted { background: #C6EFCE !important; }
+  tr.row-promoted td:first-child { border-left: 3px solid #2e7d32; }
+  tr.row-relegated { background: #FFC7CE !important; }
+  tr.playoff-cutoff td { border-bottom: 3px solid #444 !important; }
+  tr.row-relegated td:first-child { border-left: 3px solid #c62828; }
+  .legend-line { font-size: 12px; margin: 4px 0 10px 0; }
+  .legend-swatch { display: inline-block; width: 12px; height: 12px; margin-right: 4px; vertical-align: middle; border: 1px solid #999; }
+  .season-block { border: 1px solid #999; padding: 10px 14px; margin-bottom: 20px; }
+  .champ-line { margin: 4px 0; font-size: 14px; }
+  .champ-line b { color: #1F3864; }
+  #runBtn { font-size: 16px; padding: 10px 24px; margin: 16px 0; cursor: pointer; }
+  #status { font-style: italic; color: #555; }
+  #results { display: none; }
+  .expansion-note { color: #7a2; font-style: italic; margin-top: 14px; padding-top: 10px; border-top: 1px dashed #ccc; }
+  .buildup-note { color: #a55; font-style: italic; margin-top: 8px; }
+  .deferred-note { color: #a55; font-style: italic; margin-top: 8px; }
+  .buildup-fields { background: #FFF9E6; padding: 8px 10px; margin-top: 8px; border: 1px dashed #cc9; }
+  .buildup-fields label { min-width: 190px; }
+  .data-freshness { font-size: 11px; color: #888; margin-top: 4px; }
+  .games-check { font-size: 11px; color: #666; margin: 4px 0 8px 0; font-style: italic; }
+  .fav-club { font-weight: bold; color: #1F3864; }
+  #favoriteSummary { border: 2px solid #1F3864; background: #F0F4FA; padding: 14px 18px; margin-bottom: 20px; border-radius: 4px; }
+  #favoriteSummary h2 { margin: -14px -18px 12px -18px; border-radius: 4px 4px 0 0; }
+  .fav-stat-line { margin: 4px 0; font-size: 14px; }
+  #leagueRecap { border: 2px solid #444; background: #F5F5F0; padding: 14px 18px; margin-top: 30px; border-radius: 4px; }
+  #leagueRecap h2 { margin: -14px -18px 12px -18px; background: #444; border-radius: 4px 4px 0 0; }
+  #leagueRecap h3 { margin-top: 16px; margin-bottom: 6px; }
+  .priority-list { list-style: none; padding: 0; margin: 8px 0 4px 0; max-width: 320px; }
+  .priority-list li { background: #fff; border: 1px solid #999; padding: 8px 10px; margin-bottom: 4px; cursor: grab; border-radius: 3px; font-size: 13px; user-select: none; }
+  .priority-list li:active { cursor: grabbing; }
+  .priority-list li.dragging { opacity: 0.4; }
+  .priority-tip { font-size: 11px; color: #666; font-style: italic; margin: 2px 0 14px 0; }
+  #validationToast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(150px); background: #c62828; color: white; padding: 12px 20px; border-radius: 4px; font-size: 14px; max-width: 520px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); transition: transform 0.3s ease; z-index: 1000; }
+  #validationToast.visible { transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="crests">
-    <svg width="30" height="33" viewBox="0 0 100 110"><path d="M50 2 L95 15 L95 55 Q95 95 50 108 Q5 95 5 55 L5 15 Z" fill="#400079" stroke="#241d12" stroke-width="4"/><text x="50" y="60" font-family="Georgia" font-size="26" fill="#fff" text-anchor="middle" font-weight="700">L</text></svg>
-    <svg width="30" height="33" viewBox="0 0 100 110"><path d="M50 2 L95 15 L95 55 Q95 95 50 108 Q5 95 5 55 L5 15 Z" fill="#7E2628" stroke="#241d12" stroke-width="4"/><text x="50" y="60" font-family="Georgia" font-size="26" fill="#fff" text-anchor="middle" font-weight="700">S</text></svg>
-    <svg width="30" height="33" viewBox="0 0 100 110"><path d="M50 2 L95 15 L95 55 Q95 95 50 108 Q5 95 5 55 L5 15 Z" fill="#00AEEF" stroke="#241d12" stroke-width="4"/><text x="50" y="58" font-family="Georgia" font-size="20" fill="#000" text-anchor="middle" font-weight="700">CS</text></svg>
-    <svg width="30" height="33" viewBox="0 0 100 110"><path d="M50 2 L95 15 L95 55 Q95 95 50 108 Q5 95 5 55 L5 15 Z" fill="#000" stroke="#241d12" stroke-width="4"/><text x="50" y="60" font-family="Georgia" font-size="26" fill="#FFC72A" text-anchor="middle" font-weight="700">P</text></svg>
-  </div>
-  <div class="kicker">Coming Soon</div>
-  <h1>USL Future Pyramid Simulator</h1>
-  <div class="divider"></div>
-  <p class="sub">An interactive tool for exploring what promotion and relegation might look like<br/>across USL Premier, USL Championship, and USL League One,<br/>beginning with the league's planned launch in 2028.</p>
-  <div class="divider"></div>
-  <p class="status">Deployment pipeline: <span>● Live</span></p>
-</div>
+
+<h1>USL Pro/Rel Simulator — MVP</h1>
+<p>Configure the settings below, then run a real multi-season simulation using genuine USL club data.</p>
+
+<form id="settingsForm">
+  <fieldset>
+    <legend>Simulation Length</legend>
+    <label for="numSeasons">Number of seasons to simulate:</label>
+    <input type="number" id="numSeasons" value="5" min="1" max="20">
+  </fieldset>
+
+  <fieldset>
+    <legend>Favorite Team (optional)</legend>
+    <label for="favoriteTeam">Follow a specific club:</label>
+    <select id="favoriteTeam">
+      <option value="">— None —</option>
+    </select>
+    <p style="font-size:12px;color:#666;font-style:italic;">Includes all current clubs and named candidate-pool clubs (not yet-to-be-generated hypothetical expansion clubs). Loads once you click "Run Simulation" the first time.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Premier</legend>
+    <label for="premierPlayoffEnabled">Playoff enabled:</label>
+    <input type="checkbox" id="premierPlayoffEnabled" checked><br>
+    <label for="premierQualifiersInitial">Qualifiers (initial):</label>
+    <input type="number" id="premierQualifiersInitial" value="4" min="2" step="2"><br>
+    <label for="premierQualifiersExpanded">Qualifiers (expanded):</label>
+    <input type="number" id="premierQualifiersExpanded" value="8" min="2" step="2"><br>
+    <label for="premierQualifiersThreshold">Expansion threshold (division size):</label>
+    <input type="number" id="premierQualifiersThreshold" value="16" min="2"><br>
+    <label for="premierPromo">Steady-state promoted / relegated:</label>
+    <input type="number" id="premierPromo" value="3" min="0" style="width:50px"> /
+    <input type="number" id="premierReleg" value="3" min="0" style="width:50px">
+
+    <div class="buildup-fields">
+      <b>Build-up</b> — target league size is set to 20 by default. Clear this field (leave it blank) to disable build-up and use only the steady-state promoted/relegated numbers above.<br>
+      <label for="premierTargetSize">Target league size:</label>
+      <input type="number" id="premierTargetSize" min="1" value="20"><br>
+      <label for="premierBuildupPromo">Build-up promoted / relegated per year:</label>
+      <input type="number" id="premierBuildupPromo" value="2" min="0" style="width:50px"> /
+      <input type="number" id="premierBuildupReleg" value="0" min="0" style="width:50px">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Championship</legend>
+    <label for="champPlayoffEnabled">Playoff enabled:</label>
+    <input type="checkbox" id="champPlayoffEnabled" checked><br>
+    <label for="champQualifiersInitial">Qualifiers (initial):</label>
+    <input type="number" id="champQualifiersInitial" value="4" min="2" step="2"><br>
+    <label for="champQualifiersExpanded">Qualifiers (expanded):</label>
+    <input type="number" id="champQualifiersExpanded" value="8" min="2" step="2"><br>
+    <label for="champQualifiersThreshold">Expansion threshold (division size):</label>
+    <input type="number" id="champQualifiersThreshold" value="16" min="2"><br>
+    <label for="champPromo">Steady-state promoted / relegated (to/from League One):</label>
+    <input type="number" id="champPromo" value="2" min="0" style="width:50px"> /
+    <input type="number" id="champReleg" value="2" min="0" style="width:50px">
+
+    <div class="buildup-fields">
+      <b>Build-up</b> — target league size is set to 20 by default. Clear this field (leave it blank) to disable build-up and use only the steady-state promoted/relegated numbers above.<br>
+      <label for="champTargetSize">Target league size:</label>
+      <input type="number" id="champTargetSize" min="1" value="20"><br>
+      <label for="champBuildupPromo">Build-up promoted / relegated per year:</label>
+      <input type="number" id="champBuildupPromo" value="2" min="0" style="width:50px"> /
+      <input type="number" id="champBuildupReleg" value="0" min="0" style="width:50px">
+    </div>
+    <div>
+      <label style="display:block; margin-top:10px;">Promotion Priority (Championship → Premier):</label>
+      <ul id="champPriorityList" class="priority-list">
+        <li draggable="true" data-rule="playoff_champion">☰ Playoff Champion</li>
+        <li draggable="true" data-rule="shield_winner">☰ Shield Winner</li>
+        <li draggable="true" data-rule="playoff_runner_up">☰ Playoff Runner-up</li>
+        <li draggable="true" data-rule="regular_season_position">☰ Regular Season Position</li>
+      </ul>
+      <p class="priority-tip">Drag to reorder. Tip: drag "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>League One</legend>
+    <label for="l1QualifiersInitial">Qualifiers per conference (initial):</label>
+    <input type="number" id="l1QualifiersInitial" value="4" min="2" step="2"><br>
+    <label for="l1QualifiersExpanded">Qualifiers per conference (expanded):</label>
+    <input type="number" id="l1QualifiersExpanded" value="8" min="2" step="2"><br>
+    <label for="l1QualifiersThreshold">Expansion threshold (clubs per conference):</label>
+    <input type="number" id="l1QualifiersThreshold" value="10" min="2">
+    <p style="font-size:12px;color:#666;font-style:italic;">Interconference game counts are calculated automatically each season (based on a 38-game cap and current conference sizes). League One also always keeps an even total club count — if a season's expansion draw would create an odd number, the extra club's entry is held back one year (see the "held back" note under League One's results when this happens).</p>
+    <div>
+      <label style="display:block; margin-top:10px;">Promotion Priority (League One → Championship):</label>
+      <ul id="l1PriorityList" class="priority-list">
+        <li draggable="true" data-rule="playoff_champion">☰ Playoff Champion</li>
+        <li draggable="true" data-rule="shield_winner">☰ Shield Winner</li>
+        <li draggable="true" data-rule="other_conference_winner">☰ Other Conference Winner</li>
+        <li draggable="true" data-rule="playoff_runner_up">☰ Playoff Runner-up</li>
+        <li draggable="true" data-rule="regular_season_position">☰ Regular Season Position</li>
+      </ul>
+      <p class="priority-tip">Drag to reorder. "Other Conference Winner" is the top club of whichever conference did NOT produce the Shield Winner. Tip: drag "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
+    </div>
+  </fieldset>
+
+  <button type="button" id="runBtn">Run Simulation</button>
+  <div id="status"></div>
+</form>
+
+<div id="results"></div>
+
+<script src="bundle.js"></script>
+<script>
+let exportData = null;
+let cachedInputs = null;
+
+const TROPHY_EMOJI = {
+shield: "🏆",
+playoff: "🥇",
+uslCup: "🏅",
+openCup: "⚽",
+};
+
+async function loadExportData() {
+  const cacheBuster = Date.now();
+  const res = await fetch("usl_export.json?t=" + cacheBuster);
+  exportData = await res.json();
+}
+
+function parseTargetSize(elementId) {
+  const raw = document.getElementById(elementId).value.trim();
+  return raw === "" ? null : parseInt(raw, 10);
+}
+
+function validatePriorityOrder(orderedRuleIds) {
+  const posOf = (id) => orderedRuleIds.indexOf(id);
+
+  const shieldPos = posOf("shield_winner");
+  const otherConfPos = posOf("other_conference_winner");
+  if (otherConfPos !== -1 && shieldPos !== -1 && otherConfPos < shieldPos) {
+    return {
+      valid: false,
+      message: "\"Other Conference Winner\" can't be ranked above \"Shield Winner\" — it's defined as whichever conference did NOT produce the Shield Winner, so Shield Winner must be decided first.",
+    };
+  }
+
+  const champPos = posOf("playoff_champion");
+  const runnerUpPos = posOf("playoff_runner_up");
+  if (runnerUpPos !== -1 && champPos !== -1 && runnerUpPos < champPos) {
+    return {
+      valid: false,
+      message: "\"Playoff Runner-up\" can't be ranked above \"Playoff Champion\" — you can't identify who lost the final before knowing who won it.",
+    };
+  }
+
+  return { valid: true };
+}
+
+function showValidationError(message) {
+  let toast = document.getElementById("validationToast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "validationToast";
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add("visible");
+  clearTimeout(toast._hideTimeout);
+  toast._hideTimeout = setTimeout(() => { toast.classList.remove("visible"); }, 5000);
+}
+
+function getListOrder(listEl) {
+  return Array.from(listEl.children).map((li) => li.dataset.rule);
+}
+
+function rebuildListOrder(listEl, ruleIdOrder) {
+  const itemsByRule = {};
+  Array.from(listEl.children).forEach((li) => { itemsByRule[li.dataset.rule] = li; });
+  for (const ruleId of ruleIdOrder) {
+    if (itemsByRule[ruleId]) listEl.appendChild(itemsByRule[ruleId]);
+  }
+}
+
+function getDragAfterElement(listEl, y) {
+  const draggableElements = [...listEl.querySelectorAll("li:not(.dragging)")];
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect();
+    const offset = y - box.top - box.height / 2;
+    if (offset < 0 && offset > closest.offset) {
+      return { offset, element: child };
+    } else {
+      return closest;
+    }
+  }, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+
+function setupPriorityList(listEl) {
+  let draggedItem = null;
+  let previousOrder = getListOrder(listEl);
+
+  listEl.querySelectorAll("li").forEach((li) => {
+    li.addEventListener("dragstart", () => {
+      draggedItem = li;
+      previousOrder = getListOrder(listEl);
+      li.classList.add("dragging");
+    });
+    li.addEventListener("dragend", () => {
+      li.classList.remove("dragging");
+    });
+  });
+
+  listEl.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    if (draggedItem == null) return;
+    const afterElement = getDragAfterElement(listEl, e.clientY);
+    if (afterElement == null) {
+      listEl.appendChild(draggedItem);
+    } else {
+      listEl.insertBefore(draggedItem, afterElement);
+    }
+  });
+
+  listEl.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const newOrder = getListOrder(listEl);
+    const validation = validatePriorityOrder(newOrder);
+    if (!validation.valid) {
+      rebuildListOrder(listEl, previousOrder);
+      showValidationError(validation.message);
+    }
+    draggedItem = null;
+  });
+}
+
+function setupAllPriorityLists() {
+  setupPriorityList(document.getElementById("champPriorityList"));
+  setupPriorityList(document.getElementById("l1PriorityList"));
+}
+
+function buildConfig() {
+  return {
+    premier_playoff_enabled: document.getElementById("premierPlayoffEnabled").checked,
+    premier_qualifiers_initial: parseInt(document.getElementById("premierQualifiersInitial").value, 10),
+    premier_qualifiers_expanded: parseInt(document.getElementById("premierQualifiersExpanded").value, 10),
+    premier_qualifiers_threshold: parseInt(document.getElementById("premierQualifiersThreshold").value, 10),
+    premier_champion_designation: "playoff_champion",
+    championship_promotion_priority: getListOrder(document.getElementById("champPriorityList")),
+    premier_championship_promo_releg: [
+      parseInt(document.getElementById("premierPromo").value, 10),
+      parseInt(document.getElementById("premierReleg").value, 10),
+    ],
+    premier_buildup: {
+    target_size: parseTargetSize("premierTargetSize"),
+    buildup_promoted: parseInt(document.getElementById("premierBuildupPromo").value, 10),
+    buildup_relegated: parseInt(document.getElementById("premierBuildupReleg").value, 10),
+  },
+  championship_playoff_enabled: document.getElementById("champPlayoffEnabled").checked,
+  championship_qualifiers_initial: parseInt(document.getElementById("champQualifiersInitial").value, 10),
+  championship_qualifiers_expanded: parseInt(document.getElementById("champQualifiersExpanded").value, 10),
+  championship_qualifiers_threshold: parseInt(document.getElementById("champQualifiersThreshold").value, 10),
+  championship_champion_designation: "shield_winner",
+  league_one_promotion_priority: getListOrder(document.getElementById("l1PriorityList")),
+  championship_league_one_promo_releg: [
+    parseInt(document.getElementById("champPromo").value, 10),
+    parseInt(document.getElementById("champReleg").value, 10),
+  ],
+  championship_buildup: {
+    target_size: parseTargetSize("champTargetSize"),
+    buildup_promoted: parseInt(document.getElementById("champBuildupPromo").value, 10),
+    buildup_relegated: parseInt(document.getElementById("champBuildupReleg").value, 10),
+  },
+  league_one_qualifiers_initial: parseInt(document.getElementById("l1QualifiersInitial").value, 10),
+  league_one_qualifiers_expanded: parseInt(document.getElementById("l1QualifiersExpanded").value, 10),
+  league_one_qualifiers_threshold: parseInt(document.getElementById("l1QualifiersThreshold").value, 10),
+  expansion_mode: "automatic_mode",
+};
+}
+
+function populateFavoriteTeamDropdown(inputs) {
+const select = document.getElementById("favoriteTeam");
+if (select.dataset.populated === "true") return; // only populate once per page load
+const allRealClubs = [...inputs.premierClubs, ...inputs.championshipClubs, ...inputs.leagueOneClubs].sort();
+const candidateNames = inputs.namedCandidatePool.map((c) => c.name).sort();
+
+const realGroup = document.createElement("optgroup");
+realGroup.label = "Current Clubs";
+for (const name of allRealClubs) {
+  const opt = document.createElement("option");
+  opt.value = name; opt.textContent = name;
+  realGroup.appendChild(opt);
+}
+select.appendChild(realGroup);
+
+const candGroup = document.createElement("optgroup");
+candGroup.label = "Candidate Pool Clubs";
+for (const name of candidateNames) {
+  const opt = document.createElement("option");
+  opt.value = name; opt.textContent = name;
+  candGroup.appendChild(opt);
+}
+select.appendChild(candGroup);
+
+select.dataset.populated = "true";
+}
+
+async function initializePage() {
+  setupAllPriorityLists();
+  try {
+    await loadExportData();
+    const inputs = loadSimulationInputs(exportData, 2028);
+    populateFavoriteTeamDropdown(inputs);
+  } catch (err) {
+    console.warn("Could not pre-load favorite team list on page load:", err.message);
+  }
+}
+
+function trophyEmojisForClub(season, club) {
+  let emojis = "";
+  if (season.premier.championInfo.shieldWinner === club || season.championship.championInfo.shieldWinner === club || season.leagueOne.shieldWinner === club) {
+    emojis += TROPHY_EMOJI.shield;
+  }
+  if (season.premier.playoffChampion === club || season.championship.playoffChampion === club || season.leagueOne.playoffChampion === club) {
+    emojis += TROPHY_EMOJI.playoff;
+  }
+  if (season.uslCup.winner === club) emojis += TROPHY_EMOJI.uslCup;
+  if (season.openCup.winner === club) emojis += TROPHY_EMOJI.openCup;
+  return emojis;
+}
+
+function clubDisplayName(club, favoriteClub, season) {
+const emojis = season ? trophyEmojisForClub(season, club) : "";
+const label = emojis ? `${club} ${emojis}` : club;
+return club === favoriteClub ? `<span class="fav-club">${label}</span>` : label;
+}
+
+function standingsTable(standings, title, promotedSet, relegatedSet, gamesPlayedByClub, favoriteClub, season, playoffCutoff) {
+  promotedSet = promotedSet || new Set();
+  relegatedSet = relegatedSet || new Set();
+  let html = `<h3>${title}</h3>`;
+  if (promotedSet.size > 0 || relegatedSet.size > 0 || playoffCutoff) {
+    html += `<div class="legend-line">`;
+    if (promotedSet.size > 0) html += `<span class="legend-swatch" style="background:#C6EFCE;"></span> Promoted &nbsp;&nbsp;`;
+    if (relegatedSet.size > 0) html += `<span class="legend-swatch" style="background:#FFC7CE;"></span> Relegated &nbsp;&nbsp;`;
+    if (playoffCutoff) html += `<span style="display:inline-block;width:20px;border-bottom:3px solid #444;vertical-align:middle;"></span> Playoff cutoff`;
+    html += `</div>`;
+  }
+  if (gamesPlayedByClub) {
+    const values = standings.map((r) => gamesPlayedByClub[r.club]).filter((v) => v !== undefined);
+    if (values.length > 0) {
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      html += `<div class="games-check">Games played this season: ${min === max ? min : min + "–" + max} per club (conference + interconference combined)</div>`;
+    }
+  }
+  html += `<table><tr><th>#</th><th>Club</th><th>Pld</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr>`;
+  standings.forEach((row, i) => {
+    let rowClass = "";
+    if (promotedSet.has(row.club)) rowClass = "row-promoted";
+    else if (relegatedSet.has(row.club)) rowClass = "row-relegated";
+    if (playoffCutoff && i + 1 === playoffCutoff) {
+      rowClass = rowClass ? `${rowClass} playoff-cutoff` : "playoff-cutoff";
+    }
+    const classAttr = rowClass ? ` class="${rowClass}"` : "";
+    const nameHtml = clubDisplayName(row.club, favoriteClub, season);
+    html += `<tr${classAttr}><td>${i + 1}</td><td>${nameHtml}</td><td>${row.pld}</td><td>${row.w}</td><td>${row.d}</td><td>${row.l}</td><td>${row.gf}</td><td>${row.ga}</td><td>${row.gd}</td><td><b>${row.pts}</b></td></tr>`;
+  });
+  html += "</table>";
+  return html;
+}
+
+function nameOrBold(name, favoriteClub) {
+if (!name) return name;
+return name === favoriteClub ? `<span class="fav-club">${name}</span>` : name;
+}
+function listOrBold(names, favoriteClub) {
+if (!names || names.length === 0) return "none";
+return names.map((n) => nameOrBold(n, favoriteClub)).join(", ");
+}
+function renderSeason(season, favoriteClub) {
+  let html = `<div class="season-block"><h2>Season ${season.year}</h2>`;
+
+  html += `<div class="champ-line"><b>Premier:</b> Shield winner: ${nameOrBold(season.premier.championInfo.shieldWinner, favoriteClub)}`;
+  if (season.premier.playoffChampion) {
+    html += ` | Playoff Champion: ${nameOrBold(season.premier.playoffChampion, favoriteClub)}`;
+  }
+  html += ` &nbsp;|&nbsp; <span style="color:#555">Premier size: ${season.divisionSizes.premier}</span></div>`;
+
+  html += `<div class="champ-line"><b>Championship:</b> Shield winner: ${nameOrBold(season.championship.championInfo.shieldWinner, favoriteClub)}`;
+  if (season.championship.playoffChampion) {
+    html += ` | Playoff Champion: ${nameOrBold(season.championship.playoffChampion, favoriteClub)}`;
+  }
+  html += ` &nbsp;|&nbsp; <span style="color:#555">Championship size: ${season.divisionSizes.championship}</span></div>`;
+
+  html += `<div class="champ-line"><b>League One:</b> Shield winner: ${nameOrBold(season.leagueOne.shieldWinner, favoriteClub)} | Playoff Champion: ${nameOrBold(season.leagueOne.playoffChampion, favoriteClub)} &nbsp;|&nbsp; <span style="color:#555">League One size: ${season.divisionSizes.leagueOne}</span></div>`;
+
+  html += `<div class="champ-line"><b>USL Cup:</b> ${nameOrBold(season.uslCup.winner, favoriteClub)} (${season.uslCup.winningDivision}) &nbsp;|&nbsp; <b>Deepest US Open Cup run:</b> ${nameOrBold(season.openCup.winner, favoriteClub)} ⚽</div>`;
+
+  html += `<div class="champ-line"><b>Promoted to Premier:</b> ${listOrBold(season.promotedToPremier, favoriteClub)} &nbsp;|&nbsp; <b>Relegated from Premier:</b> ${listOrBold(season.relegatedFromPremier, favoriteClub)}</div>`;
+  html += `<div class="champ-line"><b>Promoted to Championship:</b> ${listOrBold(season.promotedToChampionship, favoriteClub)} &nbsp;|&nbsp; <b>Relegated to League One:</b> ${listOrBold(season.relegatedFromChampionship, favoriteClub)}</div>`;
+
+  if (season.buildupMessages && season.buildupMessages.length > 0) {
+    for (const msg of season.buildupMessages) html += `<div class="buildup-note">${msg}</div>`;
+  }
+  if (season.deferredMessage) html += `<div class="deferred-note">${season.deferredMessage}</div>`;
+
+  const premierRelegatedSet = new Set(season.relegatedFromPremier);
+  const champPromotedSet = new Set(season.promotedToPremier);
+  const champRelegatedSet = new Set(season.relegatedFromChampionship);
+  const l1PromotedSet = new Set(season.promotedToChampionship);
+
+  html += standingsTable(season.premier.standings, "Premier — Final Table", new Set(), premierRelegatedSet, null, favoriteClub, season, season.premier.playoffQualifierCount);
+  html += standingsTable(season.championship.standings, "Championship — Final Table", champPromotedSet, champRelegatedSet, null, favoriteClub, season, season.championship.playoffQualifierCount);
+  html += standingsTable(season.leagueOne.eastStandings, "League One — East Conference", l1PromotedSet, new Set(), season.leagueOne.gamesPlayedByClub, favoriteClub, season, season.leagueOne.playoffQualifierCountPerConference);
+  html += standingsTable(season.leagueOne.westStandings, "League One — West Conference", l1PromotedSet, new Set(), season.leagueOne.gamesPlayedByClub, favoriteClub, season, season.leagueOne.playoffQualifierCountPerConference);
+
+  if (season.expansionAdditions.length > 0) {
+    const list = season.expansionAdditions.map(([name, div]) => `${nameOrBold(name, favoriteClub)} (→ ${div})`).join(", ");
+    html += `<div class="expansion-note">Entering next season: ${list}</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function findClubDivisionAndPosition(season, club) {
+  const divisions = [
+    ["premier", season.premier.standings],
+    ["championship", season.championship.standings],
+    ["league_one", season.leagueOne.standings],
+  ];
+  for (const [divisionName, standings] of divisions) {
+    const idx = standings.findIndex((row) => row.club === club);
+    if (idx !== -1) return { division: divisionName, position: idx + 1, divisionSize: standings.length };
+  }
+  return null;
+}
+const DIVISION_TIER = { premier: 0, championship: 1, league_one: 2 };
+const DIVISION_LABEL = { premier: "Premier", championship: "Championship", league_one: "League One" };
+function isShieldWinnerSeason(season, club) {
+return season.premier.championInfo.shieldWinner === club || season.championship.championInfo.shieldWinner === club || season.leagueOne.shieldWinner === club;
+}
+function isPlayoffChampionSeason(season, club) {
+  return season.premier.playoffChampion === club || season.championship.playoffChampion === club || season.leagueOne.playoffChampion === club;
+}
+function isUslCupWinnerSeason(season, club) { return season.uslCup.winner === club; }
+function trophyCountForSeason(season, club) {
+return (isShieldWinnerSeason(season, club) ? 1 : 0) + (isPlayoffChampionSeason(season, club) ? 1 : 0) + (isUslCupWinnerSeason(season, club) ? 1 : 0);
+}
+function goodnessKey(season, club, divAndPos) {
+  return [DIVISION_TIER[divAndPos.division], divAndPos.position, -trophyCountForSeason(season, club)];
+}
+function compareKeys(a, b) {
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] - b[i];
+  return 0;
+}
+
+function computeFavoriteTeamSummary(seasonHistory, favoriteClub, startingClubNames, candidatePoolNames) {
+  const isStartingClub = startingClubNames.includes(favoriteClub);
+  const isCandidateClub = !isStartingClub && candidatePoolNames.includes(favoriteClub);
+
+  const seasonsWithClub = [];
+  let entryYear = null;
+  let promotionCount = 0, relegationCount = 0;
+  const trophyTotals = { shield: 0, playoff: 0, uslCup: 0 };
+
+  for (const season of seasonHistory) {
+    const divAndPos = findClubDivisionAndPosition(season, favoriteClub);
+    if (divAndPos && entryYear === null) entryYear = season.year;
+    if (divAndPos) {
+      const key = goodnessKey(season, favoriteClub, divAndPos);
+      seasonsWithClub.push({ year: season.year, ...divAndPos, key });
+      if (isShieldWinnerSeason(season, favoriteClub)) trophyTotals.shield += 1;
+      if (isPlayoffChampionSeason(season, favoriteClub)) trophyTotals.playoff += 1;
+      if (isUslCupWinnerSeason(season, favoriteClub)) trophyTotals.uslCup += 1;
+    }
+    if (season.promotedToPremier.includes(favoriteClub) || season.promotedToChampionship.includes(favoriteClub)) promotionCount += 1;
+    if (season.relegatedFromPremier.includes(favoriteClub) || season.relegatedFromChampionship.includes(favoriteClub)) relegationCount += 1;
+  }
+
+  if (seasonsWithClub.length === 0) {
+    return { neverEntered: true, message: `${favoriteClub} had not yet entered the league after ${seasonHistory.length} simulated season${seasonHistory.length === 1 ? "" : "s"}.` };
+  }
+
+  const seasonsPerDivision = { premier: 0, championship: 0, league_one: 0 };
+  for (const s of seasonsWithClub) seasonsPerDivision[s.division] += 1;
+
+  let bestKey = seasonsWithClub[0].key, worstKey = seasonsWithClub[0].key;
+  for (const s of seasonsWithClub) {
+    if (compareKeys(s.key, bestKey) < 0) bestKey = s.key;
+    if (compareKeys(s.key, worstKey) > 0) worstKey = s.key;
+  }
+  const bestSeasons = seasonsWithClub.filter((s) => compareKeys(s.key, bestKey) === 0).sort((a, b) => a.year - b.year);
+  const worstSeasons = seasonsWithClub.filter((s) => compareKeys(s.key, worstKey) === 0).sort((a, b) => a.year - b.year);
+  const formatTied = (list) => ({ year: list[0].year, division: list[0].division, position: list[0].position, divisionSize: list[0].divisionSize, alsoAchievedInYears: list.slice(1).map((s) => s.year) });
+
+  return {
+    neverEntered: false, isCandidateClub, entryYear: isCandidateClub ? entryYear : null,
+    seasonsPerDivision, promotionCount, relegationCount, trophyTotals,
+    bestSeason: formatTied(bestSeasons), worstSeason: formatTied(worstSeasons),
+  };
+}
+
+function renderSeasonHighlight(s) {
+  const alsoText = s.alsoAchievedInYears.length > 0 ? ` (also achieved this result in ${s.alsoAchievedInYears.join(", ")})` : "";
+  return `${s.year}: finished ${s.position}${ordinalSuffix(s.position)} of ${s.divisionSize} in ${DIVISION_LABEL[s.division]}${alsoText}`;
+}
+function ordinalSuffix(n) {
+  const j = n % 10, k = n % 100;
+  if (j === 1 && k !== 11) return "st";
+  if (j === 2 && k !== 12) return "nd";
+  if (j === 3 && k !== 13) return "rd";
+  return "th";
+}
+
+function renderFavoriteTeamSummary(summary, favoriteClub) {
+  let html = `<div id="favoriteSummary"><h2>${favoriteClub} — Simulation Summary</h2>`;
+  if (summary.neverEntered) {
+    html += `<div class="fav-stat-line">${summary.message}</div></div>`;
+    return html;
+  }
+  if (summary.isCandidateClub) {
+    html += `<div class="fav-stat-line"><b>Entered the league:</b> ${summary.entryYear}</div>`;
+  }
+  html += `<div class="fav-stat-line"><b>Seasons in Premier:</b> ${summary.seasonsPerDivision.premier} &nbsp;|&nbsp; <b>Championship:</b> ${summary.seasonsPerDivision.championship} &nbsp;|&nbsp; <b>League One:</b> ${summary.seasonsPerDivision.league_one}</div>`;
+  html += `<div class="fav-stat-line"><b>Promotions:</b> ${summary.promotionCount} &nbsp;|&nbsp; <b>Relegations:</b> ${summary.relegationCount}</div>`;
+  html += `<div class="fav-stat-line"><b>Trophies:</b> Shield ${TROPHY_EMOJI.shield} × ${summary.trophyTotals.shield} &nbsp;|&nbsp; Playoff Champion ${TROPHY_EMOJI.playoff} × ${summary.trophyTotals.playoff} &nbsp;|&nbsp; USL Cup ${TROPHY_EMOJI.uslCup} × ${summary.trophyTotals.uslCup}</div>`;
+  html += `<div class="fav-stat-line"><b>Best season:</b> ${renderSeasonHighlight(summary.bestSeason)}</div>`;
+  html += `<div class="fav-stat-line"><b>Worst season:</b> ${renderSeasonHighlight(summary.worstSeason)}</div>`;
+  html += `</div>`;
+  return html;
+}
+
+function shieldWinnerDivision(season, club) {
+  if (season.premier.championInfo.shieldWinner === club) return "premier";
+  if (season.championship.championInfo.shieldWinner === club) return "championship";
+  if (season.leagueOne.shieldWinner === club) return "league_one";
+  return null;
+}
+
+function recapRankNumber(divAndPos) {
+  return DIVISION_TIER[divAndPos.division] * 1000 + divAndPos.position;
+}
+
+function computeLeagueRecap(seasonHistory) {
+  const clubHistories = {};
+  const allClubsEverSeen = new Set();
+
+  for (const season of seasonHistory) {
+    const allStandingsThisSeason = [
+      ...season.premier.standings.map((r) => ({ ...r, division: "premier" })),
+      ...season.championship.standings.map((r) => ({ ...r, division: "championship" })),
+      ...season.leagueOne.standings.map((r) => ({ ...r, division: "league_one" })),
+    ];
+    for (const row of allStandingsThisSeason) allClubsEverSeen.add(row.club);
+  }
+
+  for (const club of allClubsEverSeen) {
+    clubHistories[club] = [];
+    for (const season of seasonHistory) {
+      const divAndPos = findClubDivisionAndPosition(season, club);
+      if (divAndPos) clubHistories[club].push({ year: season.year, ...divAndPos });
+    }
+  }
+
+  const promotionCounts = {};
+  const relegationCounts = {};
+  for (const season of seasonHistory) {
+    for (const club of [...season.promotedToPremier, ...season.promotedToChampionship]) {
+      promotionCounts[club] = (promotionCounts[club] || 0) + 1;
+    }
+    for (const club of [...season.relegatedFromPremier, ...season.relegatedFromChampionship]) {
+      relegationCounts[club] = (relegationCounts[club] || 0) + 1;
+    }
+  }
+  function topByCount(counts) {
+    const entries = Object.entries(counts);
+    if (entries.length === 0) return { count: 0, clubs: [] };
+    const maxCount = Math.max(...entries.map(([, c]) => c));
+    if (maxCount === 0) return { count: 0, clubs: [] };
+    return { count: maxCount, clubs: entries.filter(([, c]) => c === maxCount).map(([club]) => club) };
+  }
+  const mostPromoted = topByCount(promotionCounts);
+  const mostRelegated = topByCount(relegationCounts);
+
+  const fullLadderClimbers = [];
+  const fullLadderFallers = [];
+  for (const club of allClubsEverSeen) {
+    const divisionsVisited = clubHistories[club].map((h) => h.division);
+    const firstL1Index = divisionsVisited.indexOf("league_one");
+    const firstPremierIndex = divisionsVisited.indexOf("premier");
+    if (firstL1Index !== -1 && firstPremierIndex !== -1 && firstPremierIndex > firstL1Index) {
+      fullLadderClimbers.push(club);
+    }
+    const lastPremierIndex = divisionsVisited.lastIndexOf("premier");
+    const lastL1Index = divisionsVisited.lastIndexOf("league_one");
+    if (lastPremierIndex !== -1 && lastL1Index !== -1 && lastL1Index > lastPremierIndex) {
+      fullLadderFallers.push(club);
+    }
+  }
+
+  let biggestSingleSeasonRiseMagnitude = 0;
+  let biggestSingleSeasonRiseInstances = [];
+  let biggestSingleSeasonFallMagnitude = 0;
+  let biggestSingleSeasonFallInstances = [];
+
+  for (const club of allClubsEverSeen) {
+    const hist = clubHistories[club];
+    for (let i = 1; i < hist.length; i++) {
+      const prev = hist[i - 1];
+      const curr = hist[i];
+      if (curr.year !== prev.year + 1) continue;
+      const delta = recapRankNumber(prev) - recapRankNumber(curr);
+      if (delta > 0) {
+        if (delta > biggestSingleSeasonRiseMagnitude) {
+          biggestSingleSeasonRiseMagnitude = delta;
+          biggestSingleSeasonRiseInstances = [{ club, fromYear: prev.year, toYear: curr.year, from: prev, to: curr }];
+        } else if (delta === biggestSingleSeasonRiseMagnitude) {
+          biggestSingleSeasonRiseInstances.push({ club, fromYear: prev.year, toYear: curr.year, from: prev, to: curr });
+        }
+      } else if (delta < 0) {
+        const fallMag = -delta;
+        if (fallMag > biggestSingleSeasonFallMagnitude) {
+          biggestSingleSeasonFallMagnitude = fallMag;
+          biggestSingleSeasonFallInstances = [{ club, fromYear: prev.year, toYear: curr.year, from: prev, to: curr }];
+        } else if (fallMag === biggestSingleSeasonFallMagnitude) {
+          biggestSingleSeasonFallInstances.push({ club, fromYear: prev.year, toYear: curr.year, from: prev, to: curr });
+        }
+      }
+    }
+  }
+
+  let biggestOverallRiseMagnitude = 0;
+  let biggestOverallRiseInstances = [];
+  let biggestOverallFallMagnitude = 0;
+  let biggestOverallFallInstances = [];
+  const finalYear = seasonHistory[seasonHistory.length - 1].year;
+
+  for (const club of allClubsEverSeen) {
+    const hist = clubHistories[club];
+    const first = hist[0];
+    const last = hist[hist.length - 1];
+    if (last.year !== finalYear) continue;
+    if (first.year === last.year) continue;
+    const delta = recapRankNumber(first) - recapRankNumber(last);
+    if (delta > 0) {
+      if (delta > biggestOverallRiseMagnitude) {
+        biggestOverallRiseMagnitude = delta;
+        biggestOverallRiseInstances = [{ club, first, last }];
+      } else if (delta === biggestOverallRiseMagnitude) {
+        biggestOverallRiseInstances.push({ club, first, last });
+      }
+    } else if (delta < 0) {
+      const fallMag = -delta;
+      if (fallMag > biggestOverallFallMagnitude) {
+        biggestOverallFallMagnitude = fallMag;
+        biggestOverallFallInstances = [{ club, first, last }];
+      } else if (fallMag === biggestOverallFallMagnitude) {
+        biggestOverallFallInstances.push({ club, first, last });
+      }
+    }
+  }
+
+  const shieldCounts = {}, playoffCounts = {}, uslCupCounts = {};
+  for (const season of seasonHistory) {
+    for (const club of allClubsEverSeen) {
+      if (isShieldWinnerSeason(season, club)) shieldCounts[club] = (shieldCounts[club] || 0) + 1;
+      if (isPlayoffChampionSeason(season, club)) playoffCounts[club] = (playoffCounts[club] || 0) + 1;
+      if (isUslCupWinnerSeason(season, club)) uslCupCounts[club] = (uslCupCounts[club] || 0) + 1;
+    }
+  }
+  const totalTrophyCounts = {};
+  for (const club of allClubsEverSeen) {
+    totalTrophyCounts[club] = (shieldCounts[club] || 0) + (playoffCounts[club] || 0) + (uslCupCounts[club] || 0);
+  }
+  const mostDecorated = topByCount(totalTrophyCounts);
+  const mostShields = topByCount(shieldCounts);
+  const mostPlayoffTitles = topByCount(playoffCounts);
+  const mostUslCups = topByCount(uslCupCounts);
+
+  let longestStreakLength = 0;
+  let longestStreakInstances = [];
+  for (const club of allClubsEverSeen) {
+    let currentStreak = 0;
+    let currentStreakStartYear = null;
+    let currentStreakDivision = null;
+    let prevYear = null;
+
+    const finalizeStreak = (endYear) => {
+      if (currentStreak > longestStreakLength) {
+        longestStreakLength = currentStreak;
+        longestStreakInstances = [{ club, startYear: currentStreakStartYear, endYear, division: currentStreakDivision, length: currentStreak }];
+      } else if (currentStreak === longestStreakLength && currentStreak > 0) {
+        longestStreakInstances.push({ club, startYear: currentStreakStartYear, endYear, division: currentStreakDivision, length: currentStreak });
+      }
+    };
+
+    for (const season of seasonHistory) {
+      const div = shieldWinnerDivision(season, club);
+      const wonThisYear = div !== null;
+      if (wonThisYear && currentStreak > 0 && div === currentStreakDivision && season.year === prevYear + 1) {
+        currentStreak += 1;
+      } else if (wonThisYear) {
+        finalizeStreak(prevYear);
+        currentStreak = 1;
+        currentStreakStartYear = season.year;
+        currentStreakDivision = div;
+      } else {
+        finalizeStreak(prevYear);
+        currentStreak = 0;
+        currentStreakStartYear = null;
+        currentStreakDivision = null;
+      }
+      prevYear = season.year;
+    }
+    finalizeStreak(prevYear);
+  }
+
+  let totalExpansionAdditions = 0;
+  let realNamedAdditions = 0;
+  let hypotheticalAdditions = 0;
+  for (const season of seasonHistory) {
+    for (const [name] of season.expansionAdditions) {
+      totalExpansionAdditions += 1;
+      if (name.startsWith("Expansion Team ")) hypotheticalAdditions += 1;
+      else realNamedAdditions += 1;
+    }
+  }
+
+  return {
+    mostPromoted, mostRelegated,
+    fullLadderClimbers, fullLadderFallers,
+    biggestSingleSeasonRise: { magnitude: biggestSingleSeasonRiseMagnitude, instances: biggestSingleSeasonRiseInstances },
+    biggestSingleSeasonFall: { magnitude: biggestSingleSeasonFallMagnitude, instances: biggestSingleSeasonFallInstances },
+    biggestOverallRise: { magnitude: biggestOverallRiseMagnitude, instances: biggestOverallRiseInstances },
+    biggestOverallFall: { magnitude: biggestOverallFallMagnitude, instances: biggestOverallFallInstances },
+    mostDecorated, mostShields, mostPlayoffTitles, mostUslCups,
+    longestStreak: { length: longestStreakLength, instances: longestStreakInstances },
+    totalExpansionAdditions, realNamedAdditions, hypotheticalAdditions,
+  };
+}
+
+function renderTransition(t) {
+  return `${DIVISION_LABEL[t.from.division]} (${t.from.position}${ordinalSuffix(t.from.position)} of ${t.from.divisionSize}) in ${t.fromYear} → ${DIVISION_LABEL[t.to.division]} (${t.to.position}${ordinalSuffix(t.to.position)} of ${t.to.divisionSize}) in ${t.toYear}`;
+}
+function renderOverallTransition(t) {
+  return `${DIVISION_LABEL[t.first.division]} (${t.first.position}${ordinalSuffix(t.first.position)} of ${t.first.divisionSize}) in ${t.first.year} → ${DIVISION_LABEL[t.last.division]} (${t.last.position}${ordinalSuffix(t.last.position)} of ${t.last.divisionSize}) in ${t.last.year}`;
+}
+function clubListWithBold(clubs, favoriteClub) {
+  return clubs.map((c) => nameOrBold(c, favoriteClub)).join(", ");
+}
+
+function renderLeagueRecap(recap, favoriteClub) {
+  let html = `<div id="leagueRecap"><h2>Simulation Recap</h2>`;
+
+  html += `<h3>Movement & Volatility</h3>`;
+  if (recap.mostPromoted.count > 0) {
+    html += `<div class="fav-stat-line"><b>Most promoted:</b> ${clubListWithBold(recap.mostPromoted.clubs, favoriteClub)} (${recap.mostPromoted.count} promotion${recap.mostPromoted.count === 1 ? "" : "s"})</div>`;
+  }
+  if (recap.mostRelegated.count > 0) {
+    html += `<div class="fav-stat-line"><b>Most relegated:</b> ${clubListWithBold(recap.mostRelegated.clubs, favoriteClub)} (${recap.mostRelegated.count} relegation${recap.mostRelegated.count === 1 ? "" : "s"})</div>`;
+  }
+  if (recap.fullLadderClimbers.length > 0) {
+    html += `<div class="fav-stat-line"><b>Rose all the way from League One to Premier:</b> ${clubListWithBold(recap.fullLadderClimbers, favoriteClub)}</div>`;
+  }
+  if (recap.fullLadderFallers.length > 0) {
+    html += `<div class="fav-stat-line"><b>Fell all the way from Premier to League One:</b> ${clubListWithBold(recap.fullLadderFallers, favoriteClub)}</div>`;
+  }
+
+  if (recap.biggestSingleSeasonRise.magnitude > 0) {
+    html += `<h3>Biggest Single-Season Swings</h3>`;
+    for (const inst of recap.biggestSingleSeasonRise.instances) {
+      html += `<div class="fav-stat-line"><b>Biggest single-season riser:</b> ${nameOrBold(inst.club, favoriteClub)} — ${renderTransition(inst)}</div>`;
+    }
+  }
+  if (recap.biggestSingleSeasonFall.magnitude > 0) {
+    for (const inst of recap.biggestSingleSeasonFall.instances) {
+      html += `<div class="fav-stat-line"><b>Biggest single-season faller:</b> ${nameOrBold(inst.club, favoriteClub)} — ${renderTransition(inst)}</div>`;
+    }
+  }
+
+  if (recap.biggestOverallRise.magnitude > 0) {
+    html += `<h3>First Season vs. Last Season</h3>`;
+    for (const inst of recap.biggestOverallRise.instances) {
+      html += `<div class="fav-stat-line"><b>Biggest overall riser:</b> ${nameOrBold(inst.club, favoriteClub)} — ${renderOverallTransition(inst)}</div>`;
+    }
+  }
+  if (recap.biggestOverallFall.magnitude > 0) {
+    for (const inst of recap.biggestOverallFall.instances) {
+      html += `<div class="fav-stat-line"><b>Biggest overall faller:</b> ${nameOrBold(inst.club, favoriteClub)} — ${renderOverallTransition(inst)}</div>`;
+    }
+  }
+
+  html += `<h3>Trophy Cabinet</h3>`;
+  if (recap.mostDecorated.count > 0) {
+    html += `<div class="fav-stat-line"><b>Most decorated club:</b> ${clubListWithBold(recap.mostDecorated.clubs, favoriteClub)} (${recap.mostDecorated.count} total trophies)</div>`;
+  }
+  if (recap.mostShields.count > 0) {
+    html += `<div class="fav-stat-line"><b>Most Shields:</b> ${clubListWithBold(recap.mostShields.clubs, favoriteClub)} (${recap.mostShields.count})</div>`;
+  }
+  if (recap.mostPlayoffTitles.count > 0) {
+    html += `<div class="fav-stat-line"><b>Most Playoff titles:</b> ${clubListWithBold(recap.mostPlayoffTitles.clubs, favoriteClub)} (${recap.mostPlayoffTitles.count})</div>`;
+  }
+  if (recap.mostUslCups.count > 0) {
+    html += `<div class="fav-stat-line"><b>Most USL Cups:</b> ${clubListWithBold(recap.mostUslCups.clubs, favoriteClub)} (${recap.mostUslCups.count})</div>`;
+  }
+  if (recap.longestStreak.length > 1) {
+    for (const inst of recap.longestStreak.instances) {
+      html += `<div class="fav-stat-line"><b>Longest table-topping streak:</b> ${nameOrBold(inst.club, favoriteClub)} — ${inst.length} straight ${DIVISION_LABEL[inst.division]} Shields (${inst.startYear}–${inst.endYear})</div>`;
+    }
+  }
+
+  html += `<h3>Expansion</h3>`;
+  html += `<div class="fav-stat-line"><b>New clubs added:</b> ${recap.totalExpansionAdditions} total (${recap.realNamedAdditions} real named candidate${recap.realNamedAdditions === 1 ? "" : "s"}, ${recap.hypotheticalAdditions} hypothetical)</div>`;
+
+  html += `</div>`;
+  return html;
+}
+
+async function runSimulation() {
+  const statusEl = document.getElementById("status");
+  const resultsEl = document.getElementById("results");
+  statusEl.textContent = "Loading real club data...";
+  resultsEl.style.display = "none";
+  resultsEl.innerHTML = "";
+
+  await loadExportData();
+  const inputs = loadSimulationInputs(exportData, 2028);
+  cachedInputs = inputs;
+  populateFavoriteTeamDropdown(inputs);
+
+  statusEl.textContent = "Computing real Stability Scores and Performance Ratings...";
+  await new Promise((r) => setTimeout(r, 10));
+
+  const sortedChampionship = [...inputs.championshipClubs].sort((a, b) => inputs.stabilityScores[b] - inputs.stabilityScores[a]);
+  const premierClubs = sortedChampionship.slice(0, 12);
+  const remainingChampionshipClubs = sortedChampionship.slice(12);
+
+  const config = buildConfig();
+  const numSeasons = parseInt(document.getElementById("numSeasons").value, 10);
+  const favoriteClub = document.getElementById("favoriteTeam").value || null;
+
+  const sim = new SimulationRun(
+    premierClubs, remainingChampionshipClubs, inputs.leagueOneClubs, inputs.stabilityScores, 2028,
+    { ...config, named_candidate_pool: inputs.namedCandidatePool }
+  );
+  for (const club of Object.keys(inputs.performanceRatings)) sim.ratings[club] = inputs.performanceRatings[club];
+  for (const club of Object.keys(inputs.attendance)) sim.attendance[club] = inputs.attendance[club];
+
+  statusEl.textContent = `Running ${numSeasons} season(s)...`;
+  await new Promise((r) => setTimeout(r, 10));
+
+  const history = sim.runFullSimulation(numSeasons);
+
+  const exportTimestamp = exportData.exported_at ? new Date(exportData.exported_at).toLocaleString() : "unknown";
+  statusEl.textContent = `Done — ${numSeasons} season(s) simulated.`;
+  let html = `<div class="data-freshness">Data loaded from usl_export.json (exported: ${exportTimestamp})</div>`;
+  html += `<div class="legend-line" style="margin-top:8px; font-size:13px;"><b>Emoji key:</b> &nbsp; ${TROPHY_EMOJI.shield} Shield Winner &nbsp;&nbsp; ${TROPHY_EMOJI.playoff} Playoff Champion &nbsp;&nbsp; ${TROPHY_EMOJI.uslCup} USL Cup Winner &nbsp;&nbsp; ${TROPHY_EMOJI.openCup} Deepest US Open Cup Run</div>`;
+
+  if (favoriteClub) {
+    const allStartingClubs = [...premierClubs, ...remainingChampionshipClubs, ...inputs.leagueOneClubs];
+    const candidateNames = inputs.namedCandidatePool.map((c) => c.name);
+    const summary = computeFavoriteTeamSummary(history, favoriteClub, allStartingClubs, candidateNames);
+    html += renderFavoriteTeamSummary(summary, favoriteClub);
+  }
+
+  html += `<h2 style="background:#2E5395;">Premier Founding Roster (top 12 real Championship clubs by calculated Stability Score)</h2><p>${premierClubs.map((c) => nameOrBold(c, favoriteClub)).join(", ")}</p>`;
+  html += history.map((s) => renderSeason(s, favoriteClub)).join("");
+  const recap = computeLeagueRecap(history);
+  html += renderLeagueRecap(recap, favoriteClub);
+  resultsEl.innerHTML = html;
+  resultsEl.style.display = "block";
+}
+
+document.getElementById("runBtn").addEventListener("click", () => {
+  runSimulation().catch((err) => {
+    document.getElementById("status").textContent = "Error: " + err.message;
+    console.error(err);
+  });
+});
+initializePage();
+</script>
 </body>
 </html>
