@@ -111,7 +111,7 @@
     <label for="champPromo">Steady-state promoted / relegated (to/from League One):</label>
     <input type="number" id="champPromo" value="2" min="0" style="width:50px"> /
     <input type="number" id="champReleg" value="2" min="0" style="width:50px">
-
+<br>
     <div class="buildup-fields">
       <b>Build-up</b> — target league size is set to 20 by default. Clear this field (leave it blank) to disable build-up and use only the steady-state promoted/relegated numbers above.<br>
       <label for="champTargetSize">Target league size:</label>
@@ -123,15 +123,39 @@
     <div>
       <label style="display:block; margin-top:10px;">Promotion Priority (Championship → Premier):</label>
       <ul id="champPriorityList" class="priority-list">
-        <li draggable="true" data-rule="playoff_champion">☰ Playoff Champion</li>
-        <li draggable="true" data-rule="shield_winner">☰ Shield Winner</li>
-        <li draggable="true" data-rule="playoff_runner_up">☰ Playoff Runner-up</li>
-        <li draggable="true" data-rule="regular_season_position">☰ Regular Season Position</li>
+        <li draggable="true" data-rule="playoff_champion">
+          <span class="priority-label">☰ Playoff Champion</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
+        <li draggable="true" data-rule="shield_winner">
+          <span class="priority-label">☰ Shield Winner</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
+        <li draggable="true" data-rule="playoff_runner_up">
+          <span class="priority-label">☰ Playoff Runner-up</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
+        <li draggable="true" data-rule="regular_season_position">
+          <span class="priority-label">☰ Regular Season Position</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
       </ul>
-      <p class="priority-tip">Drag to reorder. Tip: drag "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
+      <p class="priority-tip">Drag to reorder, or use the arrow buttons. Tip: drag/move "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
     </div>
   </fieldset>
-
+<br>
   <fieldset>
     <legend>League One</legend>
     <label for="l1QualifiersInitial">Qualifiers per conference (initial):</label>
@@ -144,15 +168,46 @@
     <div>
       <label style="display:block; margin-top:10px;">Promotion Priority (League One → Championship):</label>
       <ul id="l1PriorityList" class="priority-list">
-        <li draggable="true" data-rule="playoff_champion">☰ Playoff Champion</li>
-        <li draggable="true" data-rule="shield_winner">☰ Shield Winner</li>
-        <li draggable="true" data-rule="other_conference_winner">☰ Other Conference Winner</li>
-        <li draggable="true" data-rule="playoff_runner_up">☰ Playoff Runner-up</li>
-        <li draggable="true" data-rule="regular_season_position">☰ Regular Season Position</li>
+        <li draggable="true" data-rule="playoff_champion">
+          <span class="priority-label">☰ Playoff Champion</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
+        <li draggable="true" data-rule="shield_winner">
+          <span class="priority-label">☰ Shield Winner</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
+        <li draggable="true" data-rule="other_conference_winner">
+          <span class="priority-label">☰ Other Conference Winner</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
+        <li draggable="true" data-rule="playoff_runner_up">
+          <span class="priority-label">☰ Playoff Runner-up</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
+        <li draggable="true" data-rule="regular_season_position">
+          <span class="priority-label">☰ Regular Season Position</span>
+          <span class="priority-arrows">
+            <button type="button" class="priority-up" aria-label="Move up">▲</button>
+            <button type="button" class="priority-down" aria-label="Move down">▼</button>
+          </span>
+        </li>
       </ul>
-      <p class="priority-tip">Drag to reorder. "Other Conference Winner" is the top club of whichever conference did NOT produce the Shield Winner. Tip: drag "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
+      <p class="priority-tip">Drag to reorder, or use the arrow buttons. "Other Conference Winner" is the top club of whichever conference did NOT produce the Shield Winner. Tip: drag/move "Regular Season Position" to the top to ignore playoff results entirely for promotion decisions.</p>
     </div>
   </fieldset>
+<br>
 
   <button type="button" id="runBtn">Run Simulation</button>
   <div id="status"></div>
